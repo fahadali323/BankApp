@@ -1,4 +1,7 @@
-# Heroku Setup
+# IT202-450
+## Fahad ALi
+### I like to eat pasta and dink water.
+
 
 - 08/30/2021 removed .htaccess and updated Procfile to use public_html as docroot
 - Profile tells Heroku how to deploy
