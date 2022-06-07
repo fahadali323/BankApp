@@ -8,6 +8,14 @@ function processArray($arr) {
     echo "<br>Processing Array:<br><pre>" . var_export($arr, true) . "</pre>";
     echo "<br>Odds output:<br>";
     //TODO add logic here to echo out only odd values
+     /*
+        ucid : fa376
+        date: 5/30/22
+        explanation: coded the part for only outputting array numbers on a single line
+        The code looks as each element in the array by index of item and takes that element
+        divides it by 2 but gets the remainder by using %. If the remainder is  equal 
+        to 1 then it is an odd number. Then for each index that is odd it gets printed out. 
+        */
     $oddvalues = array();
     foreach($arr as $item)
     {

@@ -8,6 +8,18 @@ function bePositive($arr) {
     echo "<br>Processing Array:<br><pre>" . var_export($arr, true) . "</pre>";
     echo "<br>Positive output:<br>";
     //TODO use echo to output all of the values as positive (even if they were originally positive)
+       /*
+        ucid : fa376
+        date: 5/30/22
+        explanation: Iterate through the elements in the generic array.
+        Then I used if statment where the if the generic array where
+        variable d is used to assign each item. 
+        Each item is then converted to positive values through using 
+        absolute(). 
+        I also created another array called positive values where
+        the positive values will be added to the postivearray. At the end 
+        I print the postive array to the server.
+        */ 
     $postivearray = array();
     foreach($arr as $item)
     { 

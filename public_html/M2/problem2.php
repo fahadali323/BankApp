@@ -7,6 +7,16 @@ function getTotal($arr) {
     echo "<br>Processing Array:<br><pre>" . var_export($arr, true) . "</pre>";
     $total = 0.00;
     //TODO do adding here
+     //set the double to a string variable
+        /*
+        ucid : fa376
+        date: 5/30/22
+        explanation: I iterate through the array by
+        adding each element to total=total+item.
+        So for every new element gets added to the previous total. 
+        For roundoff I used sprintf() which rounds to two decimal places
+        and then print the total.
+        */
     foreach($arr as $item)
     {
         $total = $total + $item;
