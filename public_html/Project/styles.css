@@ -15,7 +15,7 @@
 }
 nav li{
     display: inline; 
-    /* background-color: rebeccapurple; */
+    background-color: rebeccapurple; 
 }
 nav li a {
     font-size: 15px;
@@ -30,7 +30,7 @@ body {
     font-family: helvetica, arial, sans-serif;
     margin: 1em;
     background-color: slategray;
-    color: #FFF8DC;
+    color: #000000;
 }
 ul li a {
     text-transform: uppercase;
@@ -42,3 +42,27 @@ nav li a:hover {
 li a {
     color: orangered;
 }
+
+table {
+    width: 100%;
+}
+  
+th {
+    height: 70px;
+}
+table, th, td {
+    border: 1px solid;
+}
+th, td {
+    border-bottom: 1px solid;
+}
+tr:nth-child(odd) {
+    background-color: #a4eee4;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+th {
+    background-color: #04AA6D;
+    color: white;
+  } 
