@@ -1,0 +1,44 @@
+.alert-success {
+    background-color: green
+}
+
+.alert-warning {
+    background-color: yellow;
+}
+
+.alert-danger {
+    background-color: red;
+}
+
+.alert-info {
+    background-color: teal;
+}
+nav li{
+    display: inline; 
+    /* background-color: rebeccapurple; */
+}
+nav li a {
+    font-size: 15px;
+    padding: 10px;
+    background-color: rgb(0, 1, 5);
+}
+input{
+    border-radius: 10%;
+}
+
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 1em;
+    background-color: slategray;
+    color: #FFF8DC;
+}
+ul li a {
+    text-transform: uppercase;
+    text-decoration: solid ;
+}
+nav li a:hover {
+    background-color:rgb(237, 255, 138);
+}
+li a {
+    color: orangered;
+}
