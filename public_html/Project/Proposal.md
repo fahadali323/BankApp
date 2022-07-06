@@ -1,5 +1,5 @@
-# Project Name: Simple Shop 
-## Project Summary: This project will create a simple e-commerce site for users. Administrators or store owners will be able to manage inventory and users will be able to manage their cart and place orders.
+# Project Name: Simple Bank 
+## Project Summary: TThis project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 ## Github Link: [https://github.com/fahadali323/IT202-450/tree/prod/public_html/Project](https://github.com/fahadali323/IT202-450/tree/prod/public_html/Project)
 ## Project Board Link: 
 ## Website Link: [https://fa376-prod.herokuapp.com/Project](https://fa376-prod.herokuapp.com/Project)
@@ -35,60 +35,95 @@
       -  https://github.com/fahadali323/IT202-450/pull/36
   - [x] \(07/05/2022  of completion) User will be able to edit their profile
       -  https://github.com/fahadali323/IT202-450/pull/36  
-
 - Milestone 2
-- [ ] \(mm/dd/yyyy of completion) User with an admin role or shop owner role will be able to add products to inventory
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Any user will be able to see products with visibility = true on the Shop page
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Admin/Shop owner will be able to see products with any visibility
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Admin/Shop owner will be able to edit any product
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to click an item from a list and view a full page with more info    about the item (Product Details Page)
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to add items to Cart
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to see their cart
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to change quantity of items in their cart
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to remove a single item from their cart via button click
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to clear their entire cart via a button click 
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Show user-friendly error messages for applicable actions  
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Show user-friendly success message for applicable actions
-    -  Link to related .md file: [Link Name](link url)
-
+  - [x] \(07/06/2022 of completion) Create the Accounts table (id, account_number [unique, always 12 characters, user_id, balance (default 0), account_type, created, modified)
+      -  https://github.com/fahadali323/IT202-450/pull/44 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/177632433-e026eb35-451b-4216-9e64-b192576e682c.png)
+  - [ ] \(mm/dd/yyyy of completion) Project setup steps:
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Create a system user if they don’t exist (this will never be logged into, it’s just to keep things working per system requirements)
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Create a world account in the Accounts table created below (if it doesn’t exist)
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Create the Transactions table (see reference at end of document)
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Dashboard page
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) System will generate a unique 12 digit account number
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) System will associate the account to the user / Account type will be set as checking
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Will require a minimum deposit of $5 (from the world account) / User friendly messages
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Limit results to 5 for now/Show account number, account type, modified, and balance
+        -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.k.a Transaction History page) 
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Show account number, account type, balance, opened/created date / Show transaction history (from Transactions table)
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Form should have a dropdown of their accounts to pick from / World account should not be in the dropdown/ Form should have a field to enter a positive numeric value / For now, allow any deposit value (0 - inf) / Form should allow the user to record a memo for the transaction
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) For withdraw, add a check to make sure they can’t withdraw more money than the account has / Show appropriate user-friendly error messages
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Each transaction is recorded as a transaction pair in the Transaction table per the details below and at the end of the document
+      -  Link to related .md file: [Link Name](link url)
 - Milestone 3
-- [ ] \(mm/dd/yyyy of completion) Cart page will have a button(link) to place order
+- [ ] \(mm/dd/yyyy of completion) User will be able to transfer between their accounts
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Orders will be able to be recorded
+  - [ ] \(mm/dd/yyyy of completion) Form should include a dropdown for account_src and a dropdown for account_dest (only accounts the user owns; no world account)
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Form should include a field for a positive numeric value
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) System shouldn’t allow the user to transfer more funds than what’s available in account_src
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Form should allow the user to record a memo for the transaction
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Each transaction is recorded as a transaction pair in the Transaction table
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Show appropriate user-friendly error messages / Show user-friendly success messages
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Checkout Page
+- [ ] \(mm/dd/yyyy of completion) Transaction History page (Same rules as the previous Milestone plus the below)
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Order Confirmation Page
+  - [ ] \(mm/dd/yyyy of completion) User will be able to filter transactions between two dates
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to filter transactions by type (deposit, withdraw, transfer)
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Transactions should paginate results after the initial 10
+    -  Link to related .md file: [Link Name](link url)
+- [ ] \(mm/dd/yyyy of completion) User’s profile page should record and show First and Last name
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to see their Purchase History
+- [ ] \(mm/dd/yyyy of completion) User will be able to transfer funds to another user’s account
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Store Owner will be able to see all Purchase History
-  -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Form should include a dropdown of the current user’s accounts (as AccountSrc) / Form should include a field for the destination user’s last name / Form should include a field for the last 4 digits of the destination user’s account number (to lookup AccountDest) / Form should include a field for a positive numerical value Form should allow the user to record a memo for the transaction
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) System shouldn’t let the user transfer more than the balance of their account
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) System will lookup appropriate account based on destination user’s last name and the last 4 digits of the account number
+    -  Link to related .md file: [Link Name](link url)  
+  - [ ] \(mm/dd/yyyy of completion) Show appropriate user-friendly error messages/ Show user-friendly success messages
+    -  Link to related .md file: [Link Name](link url)  
+  - [ ] \(mm/dd/yyyy of completion) Transaction will be recorded with the type as “ext-transfer”/ Each transaction is recorded as a transaction pair in the Transaction table
+    -  Link to related .md file: [Link Name](link url)    
 - Milestone 4
-- [ ] \(mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table)
+- [ ] \(mm/dd/yyyy of completion) 
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to rate a product they purchased
+- [ ] \(mm/dd/yyyy of completion) 
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User’s Purchase History Changes   
+- [ ] \(mm/dd/yyyy of completion) 
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User’s Purchase History Changes
+- [ ] \(mm/dd/yyyy of completion) 
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Add pagination to Shop Page
+- [ ] \(mm/dd/yyyy of completion) 
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Store Owner will be able to see all products out of stock
+- [ ] \(mm/dd/yyyy of completion) 
   -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User can sort products by average rating on the Shop Page
+- [ ] \(mm/dd/yyyy of completion) 
   -  Link to related .md file: [Link Name](link url)
 
   - 

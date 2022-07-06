@@ -23,3 +23,5 @@ require(__DIR__ . "/duplicate_user_details.php");
 require(__DIR__ . "/reset_session.php");
 
 require(__DIR__ . "/get_url.php");
+//Create the Accounts table
+require(__DIR__ . "/create_account.php");
