@@ -36,42 +36,43 @@
   - [x] \(07/05/2022  of completion) User will be able to edit their profile
       -  https://github.com/fahadali323/IT202-450/pull/36  
 - Milestone 2
-- [ ] \(mm/dd/yyyy of completion) Create the Accounts table (id, account_number [unique, always 12 characters, user_id, balance (default 0), account_type, created, modified)
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Project setup steps:
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Create a system user if they don’t exist (this will never be logged into, it’s just to keep things working per system requirements)
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Create a world account in the Accounts table created below (if it doesn’t exist)
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Create the Transactions table (see reference at end of document)
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Dashboard page
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) System will generate a unique 12 digit account number
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) System will associate the account to the user / Account type will be set as checking
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Will require a minimum deposit of $5 (from the world account) / User friendly messages
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Limit results to 5 for now/Show account number, account type, modified, and balance
+  - [x] \(07/06/2022 of completion) Create the Accounts table (id, account_number [unique, always 12 characters, user_id, balance (default 0), account_type, created, modified)
+      -  https://github.com/fahadali323/IT202-450/pull/44 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/177632433-e026eb35-451b-4216-9e64-b192576e682c.png)
+  - [ ] \(mm/dd/yyyy of completion) Project setup steps:
       -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.k.a Transaction History page) 
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Show account number, account type, balance, opened/created date / Show transaction history (from Transactions table)
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Form should have a dropdown of their accounts to pick from / World account should not be in the dropdown/ Form should have a field to enter a positive numeric value / For now, allow any deposit value (0 - inf) / Form should allow the user to record a memo for the transaction
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) For withdraw, add a check to make sure they can’t withdraw more money than the account has / Show appropriate user-friendly error messages
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Each transaction is recorded as a transaction pair in the Transaction table per the details below and at the end of the document
-    -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Create a system user if they don’t exist (this will never be logged into, it’s just to keep things working per system requirements)
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Create a world account in the Accounts table created below (if it doesn’t exist)
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Create the Transactions table (see reference at end of document)
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Dashboard page
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) System will generate a unique 12 digit account number
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) System will associate the account to the user / Account type will be set as checking
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Will require a minimum deposit of $5 (from the world account) / User friendly messages
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Limit results to 5 for now/Show account number, account type, modified, and balance
+        -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.k.a Transaction History page) 
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Show account number, account type, balance, opened/created date / Show transaction history (from Transactions table)
+      -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Form should have a dropdown of their accounts to pick from / World account should not be in the dropdown/ Form should have a field to enter a positive numeric value / For now, allow any deposit value (0 - inf) / Form should allow the user to record a memo for the transaction
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) For withdraw, add a check to make sure they can’t withdraw more money than the account has / Show appropriate user-friendly error messages
+      -  Link to related .md file: [Link Name](link url)
+    - [ ] \(mm/dd/yyyy of completion) Each transaction is recorded as a transaction pair in the Transaction table per the details below and at the end of the document
+      -  Link to related .md file: [Link Name](link url)
 - Milestone 3
 - [ ] \(mm/dd/yyyy of completion) User will be able to transfer between their accounts
   -  Link to related .md file: [Link Name](link url)
