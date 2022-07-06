@@ -13,16 +13,19 @@
 .alert-info {
     background-color: teal;
 }
-nav li{
-    display: inline; 
-    background-color: rebeccapurple; 
+
+nav li {
+    display: inline;
+    background-color: rebeccapurple;
 }
+
 nav li a {
     font-size: 15px;
     padding: 10px;
     background-color: rgb(0, 1, 5);
 }
-input{
+
+input {
     border-radius: 10%;
 }
 
@@ -32,13 +35,16 @@ body {
     background-color: slategray;
     color: #000000;
 }
+
 ul li a {
     text-transform: uppercase;
-    text-decoration: solid ;
+    text-decoration: solid;
 }
+
 nav li a:hover {
-    background-color:rgb(237, 255, 138);
+    background-color: rgb(237, 255, 138);
 }
+
 li a {
     color: orangered;
 }
@@ -46,23 +52,69 @@ li a {
 table {
     width: 100%;
 }
-  
+
 th {
     height: 70px;
 }
-table, th, td {
+
+table,
+th,
+td {
     border: 1px solid;
 }
-th, td {
+
+th,
+td {
     border-bottom: 1px solid;
 }
+
 tr:nth-child(odd) {
     background-color: #a4eee4;
 }
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
 th {
     background-color: #04AA6D;
     color: white;
-  } 
+}
+
+li {
+    list-style-type: none;
+    font-size: 16pt;
+}
+
+.mail {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+    background:
+        #D8F1F8;
+    border: 1px soild silver;
+}
+
+.mail h2 {
+    margin-left: 30px;
+}
+
+input {
+    font-size: 20pt;
+}
+
+input:focus,
+textarea:focus {
+    background-color: lightyellow;
+}
+
+input submit {
+    font-size: 12pt;
+    display: table-cell;
+}
+
+.rq {
+    color: #FF0000;
+    font-size: 10pt;
+}

@@ -16,7 +16,7 @@ require(__DIR__ . "/../../partials/nav.php");
     function validate(form) {
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
-
+        
         //TODO update clientside validation to check if it should
         //valid email or username
         return true;

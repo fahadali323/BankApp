@@ -129,7 +129,15 @@ $username = get_username();
         //example of using flash via javascript
         //find the flash container, create a new element, appendChild
         if (pw !== con) {
-            flash("Password and Confrim password must match", "warning");
+            let flash = document.getElementById("flash");
+            let outerDiv = document.createElement("div");
+            outerDiv.className = "row justify-content-center";
+            let innerDiv = document.createElement("div");
+            innerDiv.className = "alert alert-warning";
+            innerDiv.innerText = "Password and Confirm password must match";
+            outerDiv.appendChild(innerDiv);
+            flash.appendChild(outerDiv);
+            flash("Password and Confirm password must match", "warning");
             isValid = false;
         }
         return isValid;
