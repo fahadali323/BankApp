@@ -40,11 +40,13 @@
       -  https://github.com/fahadali323/IT202-450/pull/44 <br>
       ![image](https://user-images.githubusercontent.com/106360996/177632433-e026eb35-451b-4216-9e64-b192576e682c.png)
   - [x] \(07/06/2022 of completion) Project setup steps:
-      -  Link to related .md file: [Link Name](link url)
+      -  https://github.com/fahadali323/IT202-450/pull/53 
     - [x] \(07/06/2022 of completion) Create a system user if they don’t exist (this will never be logged into, it’s just to keep things working per system requirements)
-      -  Link to related .md file: [Link Name](link url)
+      - https://github.com/fahadali323/IT202-450/pull/53
+      ![image](https://user-images.githubusercontent.com/106360996/177639344-997bbd85-8286-4904-9a81-80a764d7c05b.png)
     - [x] \(07/06/2022 of completion) Create a world account in the Accounts table created below (if it doesn’t exist)
-      -  Link to related .md file: [Link Name](link url)
+      -  https://github.com/fahadali323/IT202-450/pull/53
+      ![image](https://user-images.githubusercontent.com/106360996/177639759-8c7c44f1-3070-4397-a695-6e9a8fa36f15.png)
   - [ ] \(mm/dd/yyyy of completion) Create the Transactions table (see reference at end of document)
       -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) Dashboard page
