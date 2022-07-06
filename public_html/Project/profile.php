@@ -125,6 +125,16 @@ $username = get_username();
         let con = form.confirmPassword.value;
         let isValid = true;
         //TODO add other client side validation....
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (error) {
+            flash('Valid email address!', 'warning');
+            allowSubmission = true;
+            return true;
+        } else {
+            flash("Invalid email address!", 'warning');
+            allowSubmission = false;
+            return false;
+        }
 
         //example of using flash via javascript
         //find the flash container, create a new element, appendChild
