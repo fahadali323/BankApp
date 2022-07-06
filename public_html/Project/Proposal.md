@@ -47,8 +47,9 @@
     - [x] \(07/06/2022 of completion) Create a world account in the Accounts table created below (if it doesn’t exist)
       -  https://github.com/fahadali323/IT202-450/pull/53 <br>
       ![image](https://user-images.githubusercontent.com/106360996/177639759-8c7c44f1-3070-4397-a695-6e9a8fa36f15.png)
-  - [ ] \(mm/dd/yyyy of completion) Create the Transactions table (see reference at end of document)
-      -  Link to related .md file: [Link Name](link url)
+  - [x] \(07/06/2022 of completion) Create the Transactions table (see reference at end of document)
+      -  https://github.com/fahadali323/IT202-450/pull/57 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/177643432-d7db8088-70fb-4594-a016-0a154c544903.png)
   - [ ] \(mm/dd/yyyy of completion) Dashboard page
       -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
