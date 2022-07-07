@@ -50,8 +50,9 @@
   - [x] \(07/06/2022 of completion) Create the Transactions table (see reference at end of document)
       -  https://github.com/fahadali323/IT202-450/pull/57 <br>
       ![image](https://user-images.githubusercontent.com/106360996/177643432-d7db8088-70fb-4594-a016-0a154c544903.png)
-  - [ ] \(mm/dd/yyyy of completion) Dashboard page
-      -  Link to related .md file: [Link Name](link url)
+  - [x] \(07/06/2022 of completion) Dashboard page
+      -  https://github.com/fahadali323/IT202-450/pull/58 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/177677267-3743054f-1ae8-40e2-9f6a-4e7ddaff6e61.png)
   - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
       -  Link to related .md file: [Link Name](link url)
     - [ ] \(mm/dd/yyyy of completion) System will generate a unique 12 digit account number
