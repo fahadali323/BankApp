@@ -63,4 +63,4 @@ function get_or_create_account()
     } else {
         flash("You're not logged in", "danger");
     }
-}
+}   
