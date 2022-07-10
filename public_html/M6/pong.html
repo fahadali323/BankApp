@@ -234,6 +234,11 @@
             checkPaddleCollision();
             checkScore();
             drawScores();
+            /*
+            Ucid: fa376
+            Name: fahad Ali
+            Date: 7/10/22
+            */
             if (ball.x + ball.w >= rightPaddle.x) {
                 ball.c = '#0000BC';
                 if (ball.h >= paddleHeight / 4) {
@@ -251,8 +256,7 @@
                 ball.c = '#FF0000';
                 if (ball.h >= paddleHeight / 4) {
                     ball.w /= 4;
-                    ball.h /= 4;
-
+                    ball.h /= 4;    
                 } else {
                     let v = Math.random() * (1.5 - .7) + .7;
                     ball.w = ball.w * v;
