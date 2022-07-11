@@ -2,14 +2,36 @@
 require(__DIR__ . "/../../partials/nav.php");
 ?>
 <?php
+//(?=.*?\d)^\$?(([1-9]\d{0,2}(,\d{3})*)|\d+)?(\.\d{1,2})?$
 
 if(isset($_POST["save"])){
+  //  $db = getDB();
     $accountType = se($_POST, "radio", null, false);
     $depositAmount = se($_POST, "deposit", "", false);
 
-    transaction($depositAmount, "deposit", -1, get_user_id(), "");
+    //echo var_export($_SESSION["user"]["account"]["id"]);
+   // echo var_export($depositAmount);
+    
     get_or_create_account($accountType, $depositAmount);
-    die(header("Location: user_accounts.php"));  
+    transaction($depositAmount, "deposit", -1, get_user_account_id(), "");
+    die(header("Location: user_accounts.php"));
+  // $y = se($_SESSION["user"], "account", "", false);
+   // echo var_export($_SESSION["user"]);
+    //var_export($_SESSION["user"]["account"]["account_number"]);
+    //transaction($depositAmount, "deposit", -1, ;
+    /*
+    $query = "SELECT id from Bank_Accounts where account = :account LIMIT 1";
+    
+    $stmt = $db->prepare($query);
+    //$stmt->bind_param("s", $_SESSION["user"]["account"]["account_number"]);
+        $stmt->execute([":account" => $_SESSION["user"]["account"]["account_number"]]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC); */
+        //$result = $stmt->get_result();
+        //$row = $result->fetch_assoc();
+    //echo var_export($result);
+    // transaction($depositAmount, "deposit", -1, $db->lastInsertID(), "");
+
+    
 }
 ?>
 <div class="container-fluid">
