@@ -64,10 +64,11 @@
     - [x] \(07/06/2022 of completion) Will require a minimum deposit of $5 (from the world account) / User friendly messages
       - https://github.com/fahadali323/IT202-450/pull/63 <br>
       ![image](https://user-images.githubusercontent.com/106360996/178171196-aa355e79-ae55-4671-b595-d96fb8c2b306.png)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) Limit results to 5 for now/Show account number, account type, modified, and balance
-        -  Link to related .md file: [Link Name](link url)
+  - [x] \(07/06/2022 of completion) User will be able to list their accounts
+      - https://github.com/fahadali323/IT202-450/pull/64
+    - [x] \(07/06/2022 of completion) Limit results to 5 for now/Show account number, account type, modified, and balance
+        -https://github.com/fahadali323/IT202-450/pull/64 <br>
+        ![image](https://user-images.githubusercontent.com/106360996/178178325-9482f5b4-41d4-4a6f-b626-47ed601cace0.png)
   - [ ] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.k.a Transaction History page) 
       -  Link to related .md file: [Link Name](link url)
     - [ ] \(mm/dd/yyyy of completion) Show account number, account type, balance, opened/created date / Show transaction history (from Transactions table)
