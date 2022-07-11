@@ -1,54 +1,5 @@
 <?php
 require_once(__DIR__ . "/user_helpers.php");
-function refresh_account_balance()
-{
-    if (is_logged_in()) {
-        $query = "UPDATE Bank_Accounts set balance = (SELECT IFNULL(SUM(diff), 0) from Bank_Account_Transactions WHERE src = :src) where id = :src";
-        $db = getDB();
-        $stmt = $db->prepare($query);
-        try {
-            $stmt->execute([":src" => get_user_id()]);
-            get_account(); //refresh session data
-        } catch (PDOException $e) {
-            flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
-        }
-    }
-}
-function transaction($money, $typeTrans, $src = -1, $dest = -1, $memo = "")
-{
-    //I'm choosing to ignore the record of 0 point transactions
-    if ($money > 0) {
-        $query = "INSERT INTO Bank_Account_Transactions (src, dest, diff, typeTrans, memo) 
-            VALUES (:acs, :acd, :pc, :r,:m), 
-            (:acs2, :acd2, :pc2, :r, :m)";
-        //I'll insert both records at once, note the placeholders kept the same and the ones changed.
-        $params[":acs"] = $src;
-        $params[":acd"] = $dest;
-        $params[":r"] = $typeTrans;
-        $params[":m"] = $memo;
-        $params[":pc"] = ($money * -1);
-        $params[":acs2"] = $dest;
-        $params[":acd2"] = $src;
-        $params[":pc2"] = $money;
-        $db = getDB();
-        $stmt = $db->prepare($query);
-        try {
-            $stmt->execute($params);
-            //Only refresh the balance of the user if the logged in user's account is part of the transfer
-            //this is needed so future features don't waste time/resources or potentially cause an error when a calculation
-            //occurs without a logged in user
-            if ($src == get_user_id() || $dest == get_user_id()) {
-                refresh_account_balance();
-            }
-        } catch (PDOException $e) {
-            flash("Transfer error occurred: " . var_export($e->errorInfo, true), "danger");
-        }
-    }
-}
-function get_random_str($length)
-{
-    return substr(str_shuffle(str_repeat('0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 36)), 0, $length);
-}
 function get_or_create_account($accountType, $money)
 {
     if (is_logged_in()) {
@@ -122,4 +73,53 @@ function get_account()
     } else {
         flash("You're not logged in", "danger");
     }
+}
+function refresh_account_balance()
+{
+    if (is_logged_in()) {
+        $query = "UPDATE Bank_Accounts set balance = (SELECT IFNULL(SUM(diff), 0) from Bank_Account_Transactions WHERE src = :src) where id = :src";
+        $db = getDB();
+        $stmt = $db->prepare($query);
+        try {
+            $stmt->execute([":src" => get_user_id()]);
+            get_account(); //refresh session data
+        } catch (PDOException $e) {
+            flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
+        }
+    }
+}
+function transaction($money, $typeTrans, $src = -1, $dest = -1, $memo = "")
+{
+    //I'm choosing to ignore the record of 0 point transactions
+    if ($money > 0) {
+        $query = "INSERT INTO Bank_Account_Transactions (src, dest, diff, typeTrans, memo) 
+            VALUES (:acs, :acd, :pc, :r,:m), 
+            (:acs2, :acd2, :pc2, :r, :m)";
+        //I'll insert both records at once, note the placeholders kept the same and the ones changed.
+        $params[":acs"] = $src;
+        $params[":acd"] = $dest;
+        $params[":r"] = $typeTrans;
+        $params[":m"] = $memo;
+        $params[":pc"] = ($money * -1);
+        $params[":acs2"] = $dest;
+        $params[":acd2"] = $src;
+        $params[":pc2"] = $money;
+        $db = getDB();
+        $stmt = $db->prepare($query);
+        try {
+            $stmt->execute($params);
+            //Only refresh the balance of the user if the logged in user's account is part of the transfer
+            //this is needed so future features don't waste time/resources or potentially cause an error when a calculation
+            //occurs without a logged in user
+            if ($src == get_user_id() || $dest == get_user_id()) {
+                refresh_account_balance();
+            }
+        } catch (PDOException $e) {
+            flash("Transfer error occurred: " . var_export($e->errorInfo, true), "danger");
+        }
+    }
+}
+function get_random_str($length)
+{
+    return substr(str_shuffle(str_repeat('0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 36)), 0, $length);
 }
