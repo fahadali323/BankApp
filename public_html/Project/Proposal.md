@@ -53,14 +53,17 @@
   - [x] \(07/06/2022 of completion) Dashboard page
       -  https://github.com/fahadali323/IT202-450/pull/58 <br>
       ![image](https://user-images.githubusercontent.com/106360996/177677267-3743054f-1ae8-40e2-9f6a-4e7ddaff6e61.png)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) System will generate a unique 12 digit account number
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) System will associate the account to the user / Account type will be set as checking
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) Will require a minimum deposit of $5 (from the world account) / User friendly messages
-      -  Link to related .md file: [Link Name](link url)
+  - [x] \(07/06/2022  of completion) User will be able to create a checking account
+      - https://github.com/fahadali323/IT202-450/pull/63 <br>
+    - [x] \(07/06/2022  of completion) System will generate a unique 12 digit account number
+      - https://github.com/fahadali323/IT202-450/pull/63 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178170929-d6b1e70c-8088-4f70-9f0e-a5d24610ca9c.png)
+    - [x] \(07/06/2022  of completion) System will associate the account to the user / Account type will be set as checking
+      - https://github.com/fahadali323/IT202-450/pull/63 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178171128-245eed79-77c1-4fea-899b-60837a5bb161.png)
+    - [x] \(07/06/2022 of completion) Will require a minimum deposit of $5 (from the world account) / User friendly messages
+      - https://github.com/fahadali323/IT202-450/pull/63 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178171196-aa355e79-ae55-4671-b595-d96fb8c2b306.png)
   - [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
       -  Link to related .md file: [Link Name](link url)
     - [ ] \(mm/dd/yyyy of completion) Limit results to 5 for now/Show account number, account type, modified, and balance

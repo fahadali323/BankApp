@@ -27,7 +27,6 @@ function transaction($money, $typeTrans, $src = -1, $dest = -1, $memo = "")
         $params[":r"] = $typeTrans;
         $params[":m"] = $memo;
         $params[":pc"] = ($money * -1);
-
         $params[":acs2"] = $dest;
         $params[":acd2"] = $src;
         $params[":pc2"] = $money;
@@ -62,7 +61,6 @@ function get_or_create_account($accountType, $money)
         $stmt = $db->prepare($query);
         try {
             $stmt->execute([":uid" => get_user_id()]);
-
                 $created = false;
                 $query = "INSERT INTO Bank_Accounts (account, user_id, account_type) VALUES (:an, :uid, :at)";
                 $stmt = $db->prepare($query);
@@ -93,7 +91,6 @@ function get_or_create_account($accountType, $money)
         }
         $_SESSION["user"]["account"] = $account; //storing the account info as a key under the user session
         //Note: if there's an error it'll initialize to the "empty" definition around line 161
-
     } else {
         flash("You're not logged in", "danger");
     }
