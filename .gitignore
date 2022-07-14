@@ -2,3 +2,5 @@
 vendor/
 .env
 .vscode
+deposit.php
+withdraw.php
