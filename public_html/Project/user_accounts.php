@@ -56,7 +56,6 @@ try{
                 <?php endforeach; ?>
             <?php endif; ?>
         </tbody>
-
 </form>
 </table>
 <?php if (empty($history)) : ?>
