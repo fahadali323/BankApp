@@ -53,30 +53,39 @@
   - [x] \(07/06/2022 of completion) Dashboard page
       -  https://github.com/fahadali323/IT202-450/pull/58 <br>
       ![image](https://user-images.githubusercontent.com/106360996/177677267-3743054f-1ae8-40e2-9f6a-4e7ddaff6e61.png)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) System will generate a unique 12 digit account number
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) System will associate the account to the user / Account type will be set as checking
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) Will require a minimum deposit of $5 (from the world account) / User friendly messages
-      -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) Limit results to 5 for now/Show account number, account type, modified, and balance
-        -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.k.a Transaction History page) 
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) Show account number, account type, balance, opened/created date / Show transaction history (from Transactions table)
-      -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) Form should have a dropdown of their accounts to pick from / World account should not be in the dropdown/ Form should have a field to enter a positive numeric value / For now, allow any deposit value (0 - inf) / Form should allow the user to record a memo for the transaction
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) For withdraw, add a check to make sure they can’t withdraw more money than the account has / Show appropriate user-friendly error messages
-      -  Link to related .md file: [Link Name](link url)
-    - [ ] \(mm/dd/yyyy of completion) Each transaction is recorded as a transaction pair in the Transaction table per the details below and at the end of the document
-      -  Link to related .md file: [Link Name](link url)
+  - [x] \(07/10/2022  of completion) User will be able to create a checking account
+      - https://github.com/fahadali323/IT202-450/pull/63 <br>
+    - [x] \(07/10/2022  of completion) System will generate a unique 12 digit account number
+      - https://github.com/fahadali323/IT202-450/pull/63 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178170929-d6b1e70c-8088-4f70-9f0e-a5d24610ca9c.png)
+    - [x] \(07/10/2022  of completion) System will associate the account to the user / Account type will be set as checking
+      - https://github.com/fahadali323/IT202-450/pull/63 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178171128-245eed79-77c1-4fea-899b-60837a5bb161.png)
+    - [x] \(07/10/2022 of completion) Will require a minimum deposit of $5 (from the world account) / User friendly messages
+      - https://github.com/fahadali323/IT202-450/pull/63 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178171196-aa355e79-ae55-4671-b595-d96fb8c2b306.png)
+  - [x] \(07/10/2022 of completion) User will be able to list their accounts
+      - https://github.com/fahadali323/IT202-450/pull/64
+    - [x] \(07/10/2022 of completion) Limit results to 5 for now/Show account number, account type, modified, and balance
+        -https://github.com/fahadali323/IT202-450/pull/64 <br>
+        ![image](https://user-images.githubusercontent.com/106360996/178178325-9482f5b4-41d4-4a6f-b626-47ed601cace0.png)
+  - [x] \(07/13/2022 of completion) User will be able to click an account for more information (a.k.a Transaction History page) 
+      - https://github.com/fahadali323/IT202-450/pull/67
+    - [x] \(07/13/2022 of completion) Show account number, account type, balance, opened/created date / Show transaction history (from Transactions table)
+      -https://github.com/fahadali323/IT202-450/pull/67 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178865066-7b8985e4-7fe9-4e71-b01f-541e8b5a7cfd.png)
+  - [x] \(07/13/2022 of completion) User will be able to deposit/withdraw from their account(s)
+      - https://github.com/fahadali323/IT202-450/pull/68 <br>
+    - [x] \(07/13/2022 of completion) Form should have a dropdown of their accounts to pick from / World account should not be in the dropdown/ Form should have a field to enter a positive numeric value / For now, allow any deposit value (0 - inf) / Form should allow the user to record a memo for the transaction
+      -https://github.com/fahadali323/IT202-450/pull/68 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178867079-19067229-de8b-4c04-b9fb-e960a29222d5.png) <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178867274-ed492e52-91b6-49db-b2ac-cdcb7dddd01b.png)
+    - [x] \(07/13/2022 of completion) For withdraw, add a check to make sure they can’t withdraw more money than the account has / Show appropriate user-friendly error messages
+      -https://github.com/fahadali323/IT202-450/pull/68 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178867396-91c0926c-e5a9-4154-b8ed-4312ee2967df.png)
+    - [x] \(07/13/2022 of completion) Each transaction is recorded as a transaction pair in the Transaction table per the details below and at the end of the document
+      -https://github.com/fahadali323/IT202-450/pull/68 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/178867628-8c674efd-0614-4d91-a026-3b6072a97feb.png)
 - Milestone 3
 - [ ] \(mm/dd/yyyy of completion) User will be able to transfer between their accounts
   -  Link to related .md file: [Link Name](link url)
