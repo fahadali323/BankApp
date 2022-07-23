@@ -2,7 +2,7 @@
 require(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["save"])){
     $account = se($_POST, "save", null, false);
-    $query = "SELECT diff, typeTrans, created, memo from Bank_Account_Transactions where src = :src LIMIT 10";
+    $query = "SELECT diff, typeTrans, created from Bank_Account_Transactions where src = :src LIMIT 10";
     $db = getDB();
     $stmt = $db->prepare($query);
     try{
@@ -30,6 +30,7 @@ try{
 }
 ?>
 <div class="container-fluid">
+<?php if (is_logged_in()) : ?>    
 <form onsubmit="return validate(this)" method="POST">
     <h1>Account list</h1>
     <table class = "table text-light">
@@ -56,6 +57,7 @@ try{
                 <?php endforeach; ?>
             <?php endif; ?>
         </tbody>
+
 </form>
 </table>
 <?php if (empty($history)) : ?>
@@ -68,7 +70,6 @@ try{
                                 <th>Amount</th>
                                 <th>Type</th>
                                 <th>Date</th>
-                                <th>Memo</th>
                             </thead>
                             <tbody>
                             <?php if (empty($history)) : ?>
@@ -78,15 +79,16 @@ try{
                                 <?php else : ?>
                             <?php foreach ($history as $h) : ?>
                                 <tr>
+                                
                                     <td class = "bal"><?php se($h, "diff"); ?></td>
                                     <td><?php se($h, "typeTrans"); ?></td>
                                     <td><?php se($h, "created"); ?></td>
-                                    <td><?php se($h, "memo"); ?></td>
                                 </tr>
                             <?php endforeach; ?> 
                             <?php endif; ?>
                             </table>
                             </tbody>
+                            <?php endif; ?> 
 </div>
 <script>
     function validate(form) {
@@ -104,8 +106,9 @@ try{
         }
         i.innerHTML = parseInt(y)/100;
         console.log(i.innerHTML);
-
+    
     }
+
 
 </script>
 <?php
