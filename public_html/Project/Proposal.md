@@ -87,22 +87,31 @@
       -https://github.com/fahadali323/IT202-450/pull/68 <br>
       ![image](https://user-images.githubusercontent.com/106360996/178867628-8c674efd-0614-4d91-a026-3b6072a97feb.png)
 - Milestone 3
-- [ ] \(mm/dd/yyyy of completion) User will be able to transfer between their accounts
-  -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Clearly label this activity with a heading showing “Internal Transfer”
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Form should include a dropdown for account_src and a dropdown for account_dest (only accounts the user owns; no world account)
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Form should include a field for a positive numeric value
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) System shouldn’t allow the user to transfer more funds than what’s available in account_src
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Form should allow the user to record a memo for the transaction
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Show appropriate user-friendly error messages / Show user-friendly success messages
-  -  Link to related .md file: [Link Name](link url)
+- [x] \(07/23/2022 of completion) User will be able to transfer between their accounts
+    - https://github.com/fahadali323/IT202-450/pull/77 <br> 
+  - [x] \(07/23/2022  of completion) Clearly label this activity with a heading showing “Internal Transfer”
+    - https://github.com/fahadali323/IT202-450/pull/77 <br> 
+    ![image](https://user-images.githubusercontent.com/106360996/180613219-1d1b9211-6edc-4c84-9f51-8a5836f80339.png)
+  - [x] \(07/23/2022  of completion) Form should include a dropdown for account_src and a dropdown for account_dest (only accounts the user owns; no world account)
+    - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+    ![image](https://user-images.githubusercontent.com/106360996/180613278-34ecbbf5-3273-40cf-a80b-e19426488b2d.png) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180613315-5ccf2ac1-1d8e-4fdf-96e1-95bd3ac37f84.png)
+  - [x] \(07/23/2022  of completion) Form should include a field for a positive numeric value
+     - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+      ![image](https://user-images.githubusercontent.com/106360996/180613340-8879bd35-8710-4316-8742-3fa96f909001.png)
+  - [x] \(07/23/2022  of completion) System shouldn’t allow the user to transfer more funds than what’s available in account_src
+      - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+      ![image](https://user-images.githubusercontent.com/106360996/180613451-cf5f91a2-89d8-430d-8aa4-e43fda2990bc.png)
+  - [x] \(07/23/2022  of completion) Form should allow the user to record a memo for the transaction
+    - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+    ![image](https://user-images.githubusercontent.com/106360996/180614425-3825878c-f837-463e-808f-be172adae6c4.png)  
+  - [x] \(07/23/2022  of completion) Show appropriate user-friendly error messages / Show user-friendly success messages
+    - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+    ![image](https://user-images.githubusercontent.com/106360996/180614480-a8606ca5-2149-4b59-9e1c-62c2c00a77f2.png) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180614520-5d1a7222-bbd6-42a6-b9a5-220bc959b5c8.png) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180614499-e011fe02-09b0-4a12-8db8-7bfc3d32de77.png)
 - [ ] \(mm/dd/yyyy of completion) Transaction History page (Same rules as the previous Milestone plus the below)
-  -  Link to related .md file: [Link Name](link url)
+    -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) User will be able to filter transactions between two dates
     -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) User will be able to filter transactions by type (deposit, withdraw, transfer)
