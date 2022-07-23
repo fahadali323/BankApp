@@ -89,6 +89,8 @@
 - Milestone 3
 - [ ] \(mm/dd/yyyy of completion) User will be able to transfer between their accounts
   -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Clearly label this activity with a heading showing “Internal Transfer”
+    -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) Form should include a dropdown for account_src and a dropdown for account_dest (only accounts the user owns; no world account)
     -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) Form should include a field for a positive numeric value
@@ -96,8 +98,6 @@
   - [ ] \(mm/dd/yyyy of completion) System shouldn’t allow the user to transfer more funds than what’s available in account_src
     -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) Form should allow the user to record a memo for the transaction
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Each transaction is recorded as a transaction pair in the Transaction table
     -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) Show appropriate user-friendly error messages / Show user-friendly success messages
   -  Link to related .md file: [Link Name](link url)
