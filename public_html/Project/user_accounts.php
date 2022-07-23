@@ -32,7 +32,7 @@ try{
 <div class="container-fluid">
 <?php if (is_logged_in()) : ?>    
 <form onsubmit="return validate(this)" method="POST">
-    <h1>Account list</h1>
+    <h1>Account List</h1>
     <table class = "table text-light">
         <thead>
             <th>Account number</th>
