@@ -13,29 +13,30 @@
 .alert-info {
     background-color: teal;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-  }
-  
-  li {
+}
+
+li {
     float: left;
     font-size: 16pt;
-  }
-  
-  li a {
+}
+
+li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     color: orangered;
-  }
-  
- ul li a {
+}
+
+ul li a {
     text-transform: uppercase;
     text-decoration: solid;
 }
@@ -90,10 +91,12 @@ th {
 input {
     font-size: 20pt;
 }
+
 input:focus,
 textarea:focus {
     background-color: lightyellow;
 }
+
 input submit {
     font-size: 12pt;
     display: table-cell;
@@ -110,8 +113,8 @@ input submit {
     display: inline;
     padding: 10px;
 }
-.col a 
-{
+
+.col a {
     text-transform: uppercase;
     color: black;
     text-decoration: none;
@@ -121,17 +124,61 @@ input submit {
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
-    margin: 2px; 
+    margin: 2px;
 }
-.button  {background-color: #008CBA;} 
-.button:hover {background-color: yellow;} 
-.button2 {background-color: #0fe4e4;} 
-.button2:hover {background-color: yellow;} 
-.button3 {background-color: #f78880;} 
-.button3:hover {background-color: yellow;} 
-.button4 {background-color: #e7e7e7;}
-.button4:hover {background-color: yellow;} 
-.button5 {background-color: #a4dbce;}
-.button5:hover {background-color: yellow;} 
-.button6 {background-color: #73e678b4;}
-.button6:hover {background-color: yellow;}
+
+.button {
+    background-color: #008CBA;
+}
+
+.button:hover {
+    background-color: yellow;
+}
+
+.button2 {
+    background-color: #0fe4e4;
+}
+
+.button2:hover {
+    background-color: yellow;
+}
+
+.button3 {
+    background-color: #f78880;
+}
+
+.button3:hover {
+    background-color: yellow;
+}
+
+.button4 {
+    background-color: #e7e7e7;
+}
+
+.button4:hover {
+    background-color: yellow;
+}
+
+.button5 {
+    background-color: #a4dbce;
+}
+
+.button5:hover {
+    background-color: yellow;
+}
+
+.button6 {
+    background-color: #73e678b4;
+}
+
+.button6:hover {
+    background-color: yellow;
+}
+
+d{
+    display: inline;
+    float: left;
+}
+.mb-3 form-group col-md-3 {
+    position: inherit;
+  }
