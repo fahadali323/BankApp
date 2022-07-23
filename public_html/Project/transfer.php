@@ -52,7 +52,7 @@ try{
                         <?php foreach ($accounts as $account) : ?>
                     <li><option><?php se($account, "account"); ?></option></li>
                 <?php endforeach; ?>
-                
+
                     </select>
     </div>
 </div>
@@ -60,7 +60,11 @@ try{
             <h2 label class="form-label text-dark" for="da" >Transfer Amount</h2>
             <input class="form-control" type="number" input type="number" min="0.01" step="0.01"  name="transfer"  id="da" aria-labelledby="da" required/>
 </div>
-<input type="submit" class="btn btn-success" value = "Transfer" name = "save"></input>  
+<div class="mb-3 form-group">
+            <h2 label class=" text-dark form-label" for="d">Memo</h2>
+            <textarea class="form-control" name="memo" id="d"></textarea>
+        </div>
+        <input type="submit" class="btn btn-success" value = "Transfer" name = "save"></input>  
     <table class = "table text-light">
         <thead>
             <th></th>
@@ -95,4 +99,4 @@ try{
 </script>
 <?php
 require(__DIR__ . "/../../partials/flash.php");
-?>
+?> 

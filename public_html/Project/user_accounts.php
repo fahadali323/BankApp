@@ -2,10 +2,10 @@
 require(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["save"])){
     $account = se($_POST, "save", null, false);
-    $query = "SELECT diff, typeTrans, created from Bank_Account_Transactions where src = :src LIMIT 10";
+    $query = "SELECT diff, typeTrans, created, memo  from Bank_Account_Transactions where src = :src LIMIT 10";
     $db = getDB();
     $stmt = $db->prepare($query);
-    try{
+    try{    
         $stmt->execute([":src" => find_account(($account))]);
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if ($results) {
@@ -70,6 +70,7 @@ try{
                                 <th>Amount</th>
                                 <th>Type</th>
                                 <th>Date</th>
+                                <th>Memo</th>
                             </thead>
                             <tbody>
                             <?php if (empty($history)) : ?>
@@ -83,6 +84,7 @@ try{
                                     <td class = "bal"><?php se($h, "diff"); ?></td>
                                     <td><?php se($h, "typeTrans"); ?></td>
                                     <td><?php se($h, "created"); ?></td>
+                                    <td><?php se($h, "memo"); ?></td>
                                 </tr>
                             <?php endforeach; ?> 
                             <?php endif; ?>
