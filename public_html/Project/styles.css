@@ -182,3 +182,16 @@ d{
 .mb-3 form-group col-md-3 {
     position: inherit;
   }
+  .pagination {
+    display:inline-flexbox;
+    justify-content: center;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .pagination a:hover:not(.active) {background-color: #ddd;}

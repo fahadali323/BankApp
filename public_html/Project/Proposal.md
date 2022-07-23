@@ -110,14 +110,22 @@
     ![image](https://user-images.githubusercontent.com/106360996/180614480-a8606ca5-2149-4b59-9e1c-62c2c00a77f2.png) <br>
     ![image](https://user-images.githubusercontent.com/106360996/180614520-5d1a7222-bbd6-42a6-b9a5-220bc959b5c8.png) <br>
     ![image](https://user-images.githubusercontent.com/106360996/180614499-e011fe02-09b0-4a12-8db8-7bfc3d32de77.png)
-- [ ] \(mm/dd/yyyy of completion) Transaction History page (Same rules as the previous Milestone plus the below)
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to filter transactions between two dates
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to filter transactions by type (deposit, withdraw, transfer)
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Transactions should paginate results after the initial 10
-    -  Link to related .md file: [Link Name](link url)
+- [x] \(mm/dd/yyyy of completion) Transaction History page (Same rules as the previous Milestone plus the below)
+    - https://github.com/fahadali323/IT202-450/pull/78 <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180620998-ed297309-640b-40e9-ba1a-7920b25cc2fa.png)
+  - [x] \(07/23/2022  of completion) User will be able to filter transactions between two dates
+    - https://github.com/fahadali323/IT202-450/pull/78 <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180621025-948686f7-bc7c-4cd8-8f88-85bc8da7c078.png)
+  - [x] \(07/23/2022  of completion) User will be able to filter transactions by type (deposit, withdraw, transfer)<br> 
+    - (Deposit) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180621102-9cdaf9ec-aa9c-4823-ab8a-13a554379df8.png)
+    - (Withdraw) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180621138-8357bb38-edb5-4a6a-8d78-6edaf4fa507d.png)
+    - (Transfer) <br> 
+    ![image](https://user-images.githubusercontent.com/106360996/180621025-948686f7-bc7c-4cd8-8f88-85bc8da7c078.png)
+  - [x] \(07/23/2022 of completion) Transactions should paginate results after the initial 10
+    - ![image](https://user-images.githubusercontent.com/106360996/180621224-50c7e0a1-af1b-44bf-9fc9-7c0e8f415519.png) <br>
+    ! (Second Page) <br> ![image](https://user-images.githubusercontent.com/106360996/180621232-495ca2dc-99ea-4f3f-bd4e-b96e79a8ec83.png)
 - [ ] \(mm/dd/yyyy of completion) User’s profile page should record and show First and Last name
   -  Link to related .md file: [Link Name](link url)
 - [ ] \(mm/dd/yyyy of completion) User will be able to transfer funds to another user’s account
@@ -133,20 +141,20 @@
   - [ ] \(mm/dd/yyyy of completion) Transaction will be recorded with the type as “ext-transfer”/ Each transaction is recorded as a transaction pair in the Transaction table
     -  Link to related .md file: [Link Name](link url)    
 - Milestone 4
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
 
   - 
 ### Intructions
