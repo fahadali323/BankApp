@@ -14,7 +14,7 @@ if(strlen($account)===12){
 
     $type = se($_GET, "type", null, false);
     $start = se($_GET, "date1", date("Y-m-d", strtotime("-1 month")), false);
-   echo var_export($start);
+   //echo var_export($start);
     $order = se($_GET, "order", "asc", false);
     $params = [];
     if (!in_array($order, ["asc", "desc"])) {
@@ -149,6 +149,7 @@ try{
                     <option value = "transfer">Transfer</option>
                     <option value = "deposit">Deposit</option>
                     <option value = "withdraw">Withdrawal</option>
+                    <option value = "ext-transfer">ext-Transfer</option>
                 </select>
                 <span class = "input-group-text" id = "sort">Sort</span>
                 <select class = "form-control" name = "sort" aria-label="sort" aria-describedby="sort">
@@ -163,7 +164,7 @@ try{
         </form>
     </div>
 
-    <?php endif?>
+
     <table class=" table text-light">
                             <thead>
                                 <th>Account ID</th>
@@ -191,7 +192,6 @@ try{
                             </table>
                             </tbody>
 </div>
-<br>
 <div>
     <?php if(!isset($page)){
         $page =1;}
@@ -199,19 +199,20 @@ try{
         if(!isset($total_pages)){
             $total_pages =1;   
         }?>
-        <ul class = "pagination justify-content-center">
+        <ul class = "pagination">
             <li class = "page-item <?php if (($page -1) < 1) echo 'disabled';?>">
-                <a class = "page-link" style="color:cadetblue;" href = "?<?php pagination_filter($page -1); ?>">Previous</a>
+                <a class = "page-link" href = "?<?php pagination_filter($page -1); ?>">Previous</a>
             </li>
             <?php for($i = 1; $i <= $total_pages; $i++) ?>
                 <li class = "page item <?php if ($page == $i) echo 'active'; ?>">
-                <a class = "page-link" style="color:cadetblue;" href = "?<?php pagination_filter($i);?>">
+                <a class = "page-link" href = "?<?php pagination_filter($i);?>">
                     <?php se($i); ?></a>
             </li>
             <li class = "page-item <?php if(($page + 1) > $total_pages) echo 'disabled';?> ">
-                <a class = "page-link" style="color:cadetblue;" href = "? <?php pagination_filter($page + 1); ?>">Next</a>
+                <a class = "page-link" href = "?<?php pagination_filter($page + 1); ?>">Next</a>
             </li>    
         </ul>
+        <?php endif?>
 </div>
 <script>
         var x = document.getElementsByClassName("bal");

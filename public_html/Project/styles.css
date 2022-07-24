@@ -132,7 +132,7 @@ input submit {
 }
 
 .button:hover {
-    background-color: yellow;
+    background-color: rgb(255, 0, 157);
 }
 
 .button2 {
@@ -140,7 +140,7 @@ input submit {
 }
 
 .button2:hover {
-    background-color: yellow;
+    background-color: rgb(255, 0, 157);
 }
 
 .button3 {
@@ -148,7 +148,7 @@ input submit {
 }
 
 .button3:hover {
-    background-color: yellow;
+    background-color: rgb(255, 0, 157);
 }
 
 .button4 {
@@ -156,15 +156,15 @@ input submit {
 }
 
 .button4:hover {
-    background-color: yellow;
+    background-color: rgb(255, 0, 157);
 }
 
 .button5 {
-    background-color: #38103b;
+    background-color: #000000;
 }
 
 .button5:hover {
-    background-color: yellow;
+    background-color: rgb(255, 0, 157);
 }
 
 .button6 {
@@ -172,9 +172,14 @@ input submit {
 }
 
 .button6:hover {
-    background-color: yellow;
+    background-color: rgb(255, 0, 157);
 }
-
+.button7 {
+    background-color: #1c4d1eb4;
+}
+.button7:hover {
+    background-color: rgb(255, 0, 157);
+}
 d{
     display: inline;
     float: left;
