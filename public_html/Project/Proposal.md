@@ -127,9 +127,11 @@
     - ![image](https://user-images.githubusercontent.com/106360996/180621224-50c7e0a1-af1b-44bf-9fc9-7c0e8f415519.png) <br>
     ! (Second Page) <br> ![image](https://user-images.githubusercontent.com/106360996/180621232-495ca2dc-99ea-4f3f-bd4e-b96e79a8ec83.png)
 - [x] \(07/24/2022 of completion) User’s profile page should record and show First and Last name
-      -  Link to related .md file: [Link Name](link url)
-    - [x] \(07/24/2022 of completion) This will require an Alter Table statement for the Users table to include two new fields with default values
-    -  Link to related .md file: [Link Name](link url)
+      - <br> https://github.com/fahadali323/IT202-450/pull/79 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/180659216-abbf46e2-1d91-441d-84b4-4b56505a37b5.png)
+  - [x] \(07/24/2022 of completion) This will require an Alter Table statement for the Users table to include two new fields with default values
+    -  https://github.com/fahadali323/IT202-450/pull/79 <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180659248-faf5bedf-85f5-4852-92b8-596ad5749a85.png)
 - [ ] \(mm/dd/yyyy of completion) User will be able to transfer funds to another user’s account
   -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) Form should include a dropdown of the current user’s accounts (as AccountSrc) / Form should include a field for the destination user’s last name / Form should include a field for the last 4 digits of the destination user’s account number (to lookup AccountDest) / Form should include a field for a positive numerical value Form should allow the user to record a memo for the transaction
