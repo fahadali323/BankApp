@@ -83,10 +83,10 @@ tr:nth-child(even) {
     color: rgb(12, 0, 0);
 }
 
-th {
+/* th {
     background-color: #04AA6D;
     color: rgb(12, 0, 0);
-}
+} */
 
 input {
     font-size: 20pt;
