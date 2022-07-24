@@ -13,13 +13,11 @@
 .alert-info {
     background-color: teal;
 }
-
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    /* list-style-type: none;   */
+    /* margin: 0;
+    padding: 0; */
+    background-color: rgb(238, 171, 171);
 }
 
 li {
@@ -27,19 +25,19 @@ li {
     font-size: 16pt;
 }
 
-li a {
+/* li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     color: orangered;
-}
+} */
 
-ul li a {
+/* ul li a {
     text-transform: uppercase;
     text-decoration: solid;
-}
+} */
 
 nav li a:hover {
     background-color: rgb(237, 255, 138);
@@ -77,15 +75,17 @@ td {
 
 tr:nth-child(odd) {
     background-color: #a4eee4;
+    color: rgb(12, 0, 0);
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+    color: rgb(12, 0, 0);
 }
 
 th {
     background-color: #04AA6D;
-    color: white;
+    color: rgb(12, 0, 0);
 }
 
 input {
@@ -94,7 +94,7 @@ input {
 
 input:focus,
 textarea:focus {
-    background-color: lightyellow;
+    background-color: rgb(25, 65, 110);
 }
 
 input submit {
@@ -116,7 +116,7 @@ input submit {
 
 .col a {
     text-transform: uppercase;
-    color: black;
+    color: rgb(236, 37, 37);
     text-decoration: none;
     border: none;
     padding: 10px 20px;
@@ -128,7 +128,7 @@ input submit {
 }
 
 .button {
-    background-color: #008CBA;
+    background-color: #084d64;
 }
 
 .button:hover {
@@ -136,7 +136,7 @@ input submit {
 }
 
 .button2 {
-    background-color: #0fe4e4;
+    background-color: #1f5555;
 }
 
 .button2:hover {
@@ -144,7 +144,7 @@ input submit {
 }
 
 .button3 {
-    background-color: #f78880;
+    background-color: #741e18;
 }
 
 .button3:hover {
@@ -152,7 +152,7 @@ input submit {
 }
 
 .button4 {
-    background-color: #e7e7e7;
+    background-color: #3f460591;
 }
 
 .button4:hover {
@@ -160,7 +160,7 @@ input submit {
 }
 
 .button5 {
-    background-color: #a4dbce;
+    background-color: #38103b;
 }
 
 .button5:hover {
@@ -168,7 +168,7 @@ input submit {
 }
 
 .button6 {
-    background-color: #73e678b4;
+    background-color: #0d7e13b4;
 }
 
 .button6:hover {
@@ -179,7 +179,7 @@ d{
     display: inline;
     float: left;
 }
-.mb-3 form-group col-md-3 {
+/* .mb-3 form-group col-md-3 {
     position: inherit;
   }
   .pagination {
@@ -194,4 +194,4 @@ d{
     text-decoration: none;
     border-radius: 5px;
   }
-  .pagination a:hover:not(.active) {background-color: #ddd;}
+  .pagination a:hover:not(.active) {background-color: #ddd;} */
