@@ -15,12 +15,13 @@ if (is_logged_in()) {
     <div class = "col">
          <div class = "col">
         <?php if (is_logged_in()) : ?>
-            <a class="button" href="<?php echo get_url('account.php'); ?>" role="button">Create Account</a>
-            <a class="button2" href="<?php echo get_url('user_accounts.php'); ?>" role="button">My Accounts</a> 
-            <a class="button3" href="<?php echo get_url('deposit.php'); ?>" role="button" role="button">Deposit</a>
-            <a class="button4" href="<?php echo get_url('withdraw.php'); ?>" role="button">Withdraw</a>
-            <a class="button5" href="<?php echo get_url('transfer.php'); ?>" role="button">Transfer</a>
-            <a class="button6" href="<?php echo get_url('profile.php'); ?>" role="button">Profile</a>    
+            <a class="button" href="<?php echo get_url('account.php'); ?>"  style= color:antiquewhite; role="button">Create Account</a>
+            <a class="button2" href="<?php echo get_url('user_accounts.php'); ?>"  style= color:antiquewhite; role="button">My Accounts</a> 
+            <a class="button3" href="<?php echo get_url('deposit.php'); ?>" style= color:antiquewhite; role="button" role="button">Deposit</a>
+            <a class="button4" href="<?php echo get_url('withdraw.php'); ?>" style= color:antiquewhite; role="button">Withdraw</a>
+            <a class="button5" href="<?php echo get_url('transfer.php'); ?>" style= color:antiquewhite; role="button">Transfer</a>
+            <a class="button6" href="<?php echo get_url('transferfunds.php'); ?>" style= color:antiquewhite; ="button">Transfer To Another User</a>
+            <a class="button7" href="<?php echo get_url('profile.php'); ?>" style= color:antiquewhite; role="button">Profile</a>    
         <?php endif; ?>
     </div>
 </div>
