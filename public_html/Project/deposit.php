@@ -28,6 +28,7 @@ try{
     flash(var_export($e->errorInfo, true), "danger");
 }
 
+
 ?>
 <?php
 
@@ -35,19 +36,22 @@ try{
 <div class = "container-fluid">
 <?php if (is_logged_in()) : ?>
    <form onsubmit="return validate(this)" method="POST">
+
             <select class=" btn btn-dark form-select" name = "account">
                     <option selected> Select an account to depsosit into</option>
                 <?php foreach ($accounts as $account) : ?>
                     <li><option><?php se($account, "account"); ?></option></li>
                 <?php endforeach; ?>
             </select>
+
+
         <div class="mb-3 form-group col-md-3">
             <h2 label class="form-label text-dark" for="da">Deposit</h2>
-            <input class="form-control" type="number" input type="number" min="0.01" step="0.01"  name="deposit"  id="da" />
+            <input class="form-control" type="number" input type="number" min="0.01" step="0.01"  name="deposit"  id="da" required/>
         </div>
         <div class="mb-3 form-group">
             <h2 label class=" text-dark form-label" for="d">Memo</h2>
-            <textarea class="form-control" name="memo" id="d"></textarea>
+            <textarea class="form-control" name="memo" id="d" maxlength =240></textarea>
         </div>
         <input type="submit" class="btn btn-success" value = "Deposit" name = "save"></input>  
    </form>

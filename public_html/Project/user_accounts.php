@@ -2,10 +2,10 @@
 require(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["save"])){
     $account = se($_POST, "save", null, false);
-    $query = "SELECT diff, typeTrans, created, memo from Bank_Account_Transactions where src = :src LIMIT 10";
+    $query = "SELECT diff, typeTrans, created, memo  from Bank_Account_Transactions where src = :src LIMIT 10";
     $db = getDB();
     $stmt = $db->prepare($query);
-    try{
+    try{    
         $stmt->execute([":src" => find_account(($account))]);
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if ($results) {
@@ -30,8 +30,9 @@ try{
 }
 ?>
 <div class="container-fluid">
+<?php if (is_logged_in()) : ?>    
 <form onsubmit="return validate(this)" method="POST">
-    <h1>Account list</h1>
+    <h1>Account List</h1>
     <table class = "table text-light">
         <thead>
             <th>Account number</th>
@@ -56,13 +57,21 @@ try{
                 <?php endforeach; ?>
             <?php endif; ?>
         </tbody>
+
 </form>
 </table>
+<div class = "row">
+<div class="mb-3 col-md-9">
 <?php if (empty($history)) : ?>
     <h1>Transaction History for No Account Shown</h1>
     <?php else : ?>
         <h1>Transaction History for <?php se($_POST, "save"); ?></h1>
     <?php endif; ?>
+</div>
+<div class="mb-3 col-md-3">
+    <a class="btn btn-dark" href="<?php echo get_url('transactions.php'); ?>" role="button">More details</a>
+</div>
+</div>
                             <table class=" table text-light">
                             <thead>
                                 <th>Amount</th>
@@ -78,6 +87,7 @@ try{
                                 <?php else : ?>
                             <?php foreach ($history as $h) : ?>
                                 <tr>
+                                
                                     <td class = "bal"><?php se($h, "diff"); ?></td>
                                     <td><?php se($h, "typeTrans"); ?></td>
                                     <td><?php se($h, "created"); ?></td>
@@ -87,6 +97,7 @@ try{
                             <?php endif; ?>
                             </table>
                             </tbody>
+                            <?php endif; ?> 
 </div>
 <script>
     function validate(form) {
@@ -104,8 +115,9 @@ try{
         }
         i.innerHTML = parseInt(y)/100;
         console.log(i.innerHTML);
-
+    
     }
+
 
 </script>
 <?php

@@ -14,31 +14,30 @@
     background-color: teal;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
+    /* list-style-type: none;   */
+    /* margin: 0;
+    padding: 0; */
+    background-color: rgb(238, 171, 171);
+}
+
+li {
     float: left;
     font-size: 16pt;
-  }
-  
-  li a {
+}
+
+/* li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     color: orangered;
-  }
-  
- ul li a {
+} */
+
+/* ul li a {
     text-transform: uppercase;
     text-decoration: solid;
-}
+} */
 
 nav li a:hover {
     background-color: rgb(237, 255, 138);
@@ -76,24 +75,28 @@ td {
 
 tr:nth-child(odd) {
     background-color: #a4eee4;
+    color: rgb(12, 0, 0);
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+    color: rgb(12, 0, 0);
 }
 
-th {
+/* th {
     background-color: #04AA6D;
-    color: white;
-}
+    color: rgb(12, 0, 0);
+} */
 
 input {
     font-size: 20pt;
 }
+
 input:focus,
 textarea:focus {
-    background-color: lightyellow;
+    background-color: rgb(25, 65, 110);
 }
+
 input submit {
     font-size: 12pt;
     display: table-cell;
@@ -110,10 +113,10 @@ input submit {
     display: inline;
     padding: 10px;
 }
-.col a 
-{
+
+.col a {
     text-transform: uppercase;
-    color: black;
+    color: rgb(236, 37, 37);
     text-decoration: none;
     border: none;
     padding: 10px 20px;
@@ -121,17 +124,79 @@ input submit {
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
-    margin: 2px; 
+    margin: 2px;
 }
-.button  {background-color: #008CBA;} 
-.button:hover {background-color: yellow;} 
-.button2 {background-color: #0fe4e4;} 
-.button2:hover {background-color: yellow;} 
-.button3 {background-color: #f78880;} 
-.button3:hover {background-color: yellow;} 
-.button4 {background-color: #e7e7e7;}
-.button4:hover {background-color: yellow;} 
-.button5 {background-color: #555555;}
-.button5:hover {background-color: yellow;} 
-.button6 {background-color: #73e678b4;}
-.button6:hover {background-color: #823ed1;} 
+
+.button {
+    background-color: #084d64;
+}
+
+.button:hover {
+    background-color: rgb(255, 0, 157);
+}
+
+.button2 {
+    background-color: #1f5555;
+}
+
+.button2:hover {
+    background-color: rgb(255, 0, 157);
+}
+
+.button3 {
+    background-color: #741e18;
+}
+
+.button3:hover {
+    background-color: rgb(255, 0, 157);
+}
+
+.button4 {
+    background-color: #3f460591;
+}
+
+.button4:hover {
+    background-color: rgb(255, 0, 157);
+}
+
+.button5 {
+    background-color: #000000;
+}
+
+.button5:hover {
+    background-color: rgb(255, 0, 157);
+}
+
+.button6 {
+    background-color: #0d7e13b4;
+}
+
+.button6:hover {
+    background-color: rgb(255, 0, 157);
+}
+.button7 {
+    background-color: #1c4d1eb4;
+}
+.button7:hover {
+    background-color: rgb(255, 0, 157);
+}
+d{
+    display: inline;
+    float: left;
+}
+/* .mb-3 form-group col-md-3 {
+    position: inherit;
+  }
+  .pagination {
+    display:inline-flexbox;
+    justify-content: center;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .pagination a:hover:not(.active) {background-color: #ddd;} */
