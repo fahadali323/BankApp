@@ -82,7 +82,7 @@ try{
 <br>
 <div class = "row ">
     <div class = "mb-3 form-group col-md-3">
-        
+    <h1 class = "text-dark" >External Transfer</h1>       
     </div>
     <div class="mb-3 form-group col-md-3">
     <h2 class = "text-warning">Source</h2>
