@@ -2,7 +2,7 @@
 ## Project Summary: TThis project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 ## Github Link: [https://github.com/fahadali323/IT202-450/tree/prod/public_html/Project](https://github.com/fahadali323/IT202-450/tree/prod/public_html/Project)
 ## Project Board Link: 
-## Website Link: [https://fa376-prod.herokuapp.com/Project](https://fa376-prod.herokuapp.com/Project)
+## Website Link: [https://fa376-prod.herokuapp.com/Project/login.php](https://fa376-prod.herokuapp.com/Project/login.php)
 ## Your Name: Fahad Ali 
 
 <!-- Line item / Feature template (use this for each bullet point) -- DO NOT DELETE THIS SECTION
@@ -87,57 +87,78 @@
       -https://github.com/fahadali323/IT202-450/pull/68 <br>
       ![image](https://user-images.githubusercontent.com/106360996/178867628-8c674efd-0614-4d91-a026-3b6072a97feb.png)
 - Milestone 3
-- [ ] \(mm/dd/yyyy of completion) User will be able to transfer between their accounts
-  -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Form should include a dropdown for account_src and a dropdown for account_dest (only accounts the user owns; no world account)
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Form should include a field for a positive numeric value
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) System shouldn’t allow the user to transfer more funds than what’s available in account_src
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Form should allow the user to record a memo for the transaction
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Each transaction is recorded as a transaction pair in the Transaction table
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Show appropriate user-friendly error messages / Show user-friendly success messages
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) Transaction History page (Same rules as the previous Milestone plus the below)
-  -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to filter transactions between two dates
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to filter transactions by type (deposit, withdraw, transfer)
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Transactions should paginate results after the initial 10
-    -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User’s profile page should record and show First and Last name
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) User will be able to transfer funds to another user’s account
-  -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Form should include a dropdown of the current user’s accounts (as AccountSrc) / Form should include a field for the destination user’s last name / Form should include a field for the last 4 digits of the destination user’s account number (to lookup AccountDest) / Form should include a field for a positive numerical value Form should allow the user to record a memo for the transaction
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) System shouldn’t let the user transfer more than the balance of their account
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) System will lookup appropriate account based on destination user’s last name and the last 4 digits of the account number
-    -  Link to related .md file: [Link Name](link url)  
-  - [ ] \(mm/dd/yyyy of completion) Show appropriate user-friendly error messages/ Show user-friendly success messages
-    -  Link to related .md file: [Link Name](link url)  
-  - [ ] \(mm/dd/yyyy of completion) Transaction will be recorded with the type as “ext-transfer”/ Each transaction is recorded as a transaction pair in the Transaction table
-    -  Link to related .md file: [Link Name](link url)    
+- [x] \(07/23/2022 of completion) User will be able to transfer between their accounts
+    - https://github.com/fahadali323/IT202-450/pull/77 <br> 
+  - [x] \(07/23/2022  of completion) Clearly label this activity with a heading showing “Internal Transfer”
+    - https://github.com/fahadali323/IT202-450/pull/77 <br> 
+    ![image](https://user-images.githubusercontent.com/106360996/180613219-1d1b9211-6edc-4c84-9f51-8a5836f80339.png)
+  - [x] \(07/23/2022  of completion) Form should include a dropdown for account_src and a dropdown for account_dest (only accounts the user owns; no world account)
+    - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+    ![image](https://user-images.githubusercontent.com/106360996/180613278-34ecbbf5-3273-40cf-a80b-e19426488b2d.png) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180613315-5ccf2ac1-1d8e-4fdf-96e1-95bd3ac37f84.png)
+  - [x] \(07/23/2022  of completion) Form should include a field for a positive numeric value
+     - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+      ![image](https://user-images.githubusercontent.com/106360996/180613340-8879bd35-8710-4316-8742-3fa96f909001.png)
+  - [x] \(07/23/2022  of completion) System shouldn’t allow the user to transfer more funds than what’s available in account_src
+      - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+      ![image](https://user-images.githubusercontent.com/106360996/180613451-cf5f91a2-89d8-430d-8aa4-e43fda2990bc.png)
+  - [x] \(07/23/2022  of completion) Form should allow the user to record a memo for the transaction
+    - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+    ![image](https://user-images.githubusercontent.com/106360996/180614425-3825878c-f837-463e-808f-be172adae6c4.png)  
+  - [x] \(07/23/2022  of completion) Show appropriate user-friendly error messages / Show user-friendly success messages
+    - https://github.com/fahadali323/IT202-450/pull/77 <br>  
+    ![image](https://user-images.githubusercontent.com/106360996/180614480-a8606ca5-2149-4b59-9e1c-62c2c00a77f2.png) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180614520-5d1a7222-bbd6-42a6-b9a5-220bc959b5c8.png) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180614499-e011fe02-09b0-4a12-8db8-7bfc3d32de77.png)
+- [x] \(mm/dd/yyyy of completion) Transaction History page (Same rules as the previous Milestone plus the below)
+    - https://github.com/fahadali323/IT202-450/pull/78 <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180620998-ed297309-640b-40e9-ba1a-7920b25cc2fa.png)
+  - [x] \(07/23/2022  of completion) User will be able to filter transactions between two dates
+    - https://github.com/fahadali323/IT202-450/pull/78 <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180621025-948686f7-bc7c-4cd8-8f88-85bc8da7c078.png)
+  - [x] \(07/23/2022  of completion) User will be able to filter transactions by type (deposit, withdraw, transfer)<br> 
+    - (Deposit) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180621102-9cdaf9ec-aa9c-4823-ab8a-13a554379df8.png)
+    - (Withdraw) <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180621138-8357bb38-edb5-4a6a-8d78-6edaf4fa507d.png)
+    - (Transfer) <br> 
+    ![image](https://user-images.githubusercontent.com/106360996/180621025-948686f7-bc7c-4cd8-8f88-85bc8da7c078.png)
+  - [x] \(07/23/2022 of completion) Transactions should paginate results after the initial 10
+    - ![image](https://user-images.githubusercontent.com/106360996/180621224-50c7e0a1-af1b-44bf-9fc9-7c0e8f415519.png) <br>
+    ! (Second Page) <br> ![image](https://user-images.githubusercontent.com/106360996/180621232-495ca2dc-99ea-4f3f-bd4e-b96e79a8ec83.png)
+- [x] \(07/24/2022 of completion) User’s profile page should record and show First and Last name
+      - <br> https://github.com/fahadali323/IT202-450/pull/79 <br>
+      ![image](https://user-images.githubusercontent.com/106360996/180659216-abbf46e2-1d91-441d-84b4-4b56505a37b5.png)
+  - [x] \(07/24/2022 of completion) This will require an Alter Table statement for the Users table to include two new fields with default values
+    -  https://github.com/fahadali323/IT202-450/pull/79 <br>
+    ![image](https://user-images.githubusercontent.com/106360996/180659248-faf5bedf-85f5-4852-92b8-596ad5749a85.png)
+- [x] \(07/24/2022  of completion) User will be able to transfer funds to another user’s account
+  - https://github.com/fahadali323/IT202-450/pull/80
+  - [x] \(07/24/2022  of completion) Form should include a dropdown of the current user’s accounts (as AccountSrc) / Form should include a field for the destination user’s last name / Form should include a field for the last 4 digits of the destination user’s account number (to lookup AccountDest) / Form should include a field for a positive numerical value Form should allow the user to record a memo for the transaction
+    - https://github.com/fahadali323/IT202-450/pull/80 <br>![image](https://user-images.githubusercontent.com/106360996/180660224-7de5d86e-a337-443b-9791-899daa341992.png)
+  - [x] \(07/24/2022 of completion) System shouldn’t let the user transfer more than the balance of their account
+    -  https://github.com/fahadali323/IT202-450/pull/80 <br> ![image](https://user-images.githubusercontent.com/106360996/180660289-2dfce218-94d6-49e9-a4ef-1bd963bb7187.png)
+  - [x] \(07/24/2022 of completion) System will lookup appropriate account based on destination user’s last name and the last 4 digits of the account number
+    -  https://github.com/fahadali323/IT202-450/pull/80 <br>  ![image](https://user-images.githubusercontent.com/106360996/180660409-44675219-7199-4229-b655-b77f9d8de184.png)
+  - [x] \(07/24/2022 of completion) Show appropriate user-friendly error messages/ Show user-friendly success messages
+    - https://github.com/fahadali323/IT202-450/pull/80 <br>   ![image](https://user-images.githubusercontent.com/106360996/180660461-5972d1c2-0076-477d-9999-f02b46db6762.png)
+  - [x] \(07/24/2022 of completion) Transaction will be recorded with the type as “ext-transfer”/ Each transaction is recorded as a transaction pair in the Transaction table
+    - https://github.com/fahadali323/IT202-450/pull/80 <br>   ![image](https://user-images.githubusercontent.com/106360996/180660483-edae7be0-0e3a-48ba-82c6-0909bc99814d.png)
 - Milestone 4
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
-- [ ] \(mm/dd/yyyy of completion) 
-  -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) 
+    -  Link to related .md file: [Link Name](link url)
 
   - 
 ### Intructions

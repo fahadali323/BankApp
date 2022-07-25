@@ -8,11 +8,13 @@ if(isset($_POST["save"])){
     }else{
         $withdrawAmount = se($_POST, "withdraw", null, false);
         $memo = se($_POST, "memo", null, false);
-        //echo var_export((int)$withdrawAmount *-1);
-        if(get_balance($account)>= $withdrawAmount){
+        
+        if(get_balance($account) - ((int)$withdrawAmount *100) >= 0){
             transaction((int)$withdrawAmount * -1, "withdraw", -1, find_account($account), $memo);
             flash("Successful withdrawal" , "success");
+            //echo var_export(get_balance($account)>= $withdrawAmount);
             die(header('Location: home.php'));
+           
         }else{
             flash("Insufficient funds" , "warning");
         }
@@ -33,8 +35,10 @@ try{
     flash(var_export($e->errorInfo, true), "danger");
 }
 
+
 ?>
 <?php
+
 ?>
 <div class = "container-fluid">
 <?php if (is_logged_in()) : ?>
@@ -50,11 +54,11 @@ try{
 
         <div class="mb-3 form-group col-md-3">
             <h2 label class="form-label text-dark" for="da">Withdraw</h2>
-            <input class="form-control" type="number" input type="number" min="0.01" step="0.01"  name="withdraw"  id="da" />
+            <input class="form-control" type="number" input type="number" min="0.01" step="0.01"  name="withdraw"  id="da" required/>
         </div>
         <div class="mb-3 form-group">
             <h2 label class=" text-dark form-label" for="d">Memo</h2>
-            <textarea class="form-control" name="memo" id="d"></textarea>
+            <textarea class="form-control" name="memo" id="d" maxlength = 240></textarea>
         </div>
         <input type="submit" class="btn btn-success" value = "Withdraw" name = "save"></input>  
    </form>
@@ -64,6 +68,7 @@ try{
     function validate(form) {
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
+
         return true;
     }
 </script>
