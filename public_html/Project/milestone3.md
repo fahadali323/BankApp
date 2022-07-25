@@ -1,31 +1,31 @@
 <table><tr><td> <em>Assignment: </em> IT202 Milestone 3 Bank Project</td></tr>
 <tr><td> <em>Student: </em> Fahad Ali(fa376)</td></tr>
-<tr><td> <em>Generated: </em> 7/25/2022 3:06:22 PM</td></tr>
+<tr><td> <em>Generated: </em> 7/25/2022 4:03:57 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-450-M22/it202-milestone-3-bank-project/grade/fa376" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <ol><li>Checkout Milestone3 branch</li><li>Create a new markdown file called milestone3.md</li><li>git add/commit/push immediate</li><li>Fill in the below deliverables</li><li>At the end copy the markdown and paste it into milestone3.md</li><li>Add/commit/push the changes to Milestone3</li><li>PR Milestone3 to dev and verify</li><li>PR dev to prod and verify</li><li>Checkout dev locally and pull changes to get ready for Milestone 4</li><li>Submit the direct link to this new milestone3.md file from your GitHub prod branch to Canvas</li></ol><p>Note: Ensure all images appear properly on GitHub and everywhere else. Images are only accepted from dev or prod, not localhost. All website links must be from prod (you can assume/infer this by getting your dev URL and changing dev to prod).</p></td></tr></table>
 <table><tr><td> <em>Deliverable 1: </em> User will be able to transfer between their accounts </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot of transfer page</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180845427-df674ff7-a28c-4ba9-8299-188c99dcd2a5.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180857801-9e7dfa39-f1ea-4063-a5b0-a299fef8831b.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>dd screenshot of transfer page<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot showing dropdown values</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180845618-24d26d1c-ab70-47d3-921f-b71eef2577e9.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180857854-eaded5fc-90aa-4c64-83b2-94260076ce49.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>showing dropdown values<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Add screenshot showing user can't transfer more funds than they have</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180845752-ba500985-4852-43c2-991f-bf69159ddd5f.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180857921-706c5f6c-1175-4116-a2ef-7b9e52ec77a3.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>user can&#39;t transfer more funds than they have<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 4: </em> Add screenshot showing user can't transfer to the same account</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180845822-d0bb3363-8736-4512-8e3f-79a28a555566.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180863491-3b1a4900-0f33-4fff-997f-74c07e47455f.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>user can&#39;t transfer to the same account<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 5: </em> Add screenshot showing you can't transfer an negative balance</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180845943-16e2c4b7-258f-4ad6-9ab7-4bf55afb92fa.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180863535-417f6792-4a09-4ca0-bc41-a1b7fb129e94.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>screenshot showing you can&#39;t transfer an negative balance<br></p>
 </td></tr>
 </table></td></tr>
@@ -35,13 +35,13 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 7: </em> Add a screenshot of the Accounts table showing both affected accounts</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180846336-5e30fdc8-d29b-4bb9-9b99-692d4f8945ee.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180863652-b19083d4-cada-4cea-9c1c-98041214f127.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p> screenshot of the Accounts table showing both affected accounts<br></p>
 </td></tr>
-<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180846572-a3f9f94c-be54-42ac-bac6-356b67c8ccb4.png"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180863711-67fffb4a-bfaf-4504-a663-7fe2583e8768.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>account 1 (Transfer from)<br></p>
 </td></tr>
-<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180846655-23202619-236f-454f-9dc3-7a3226eb23b8.png"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180864002-ffb5f846-e42a-4e53-8dda-a73d8777f5c5.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>account 2 (transfer into)<br></p>
 </td></tr>
 </table></td></tr>
@@ -95,23 +95,23 @@
 </table></td></tr>
 <table><tr><td> <em>Deliverable 4: </em> User will be able to transfer funds to another user </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot of the external transfer page with filled in data</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180851127-dfdbff0c-4a3b-4fe9-b224-b6f3773efa0e.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180864195-27c0307e-6a29-4344-b1b3-c538e7e077aa.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p> external transfer page with filled in data<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot showing user can't send more than they have</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180851371-cb0d450b-169f-4f36-ae63-3fdc364d4d42.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180864274-01674fa1-1830-4f80-8749-f251a16ab7f2.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>showing user can&#39;t send more than they have<br></p>
 </td></tr>
 <tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180851470-75861d9b-edd8-4de0-b384-b598131e9565.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p> code snippet that prevents this on the server-side<br></p>
 </td></tr>
-<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180851579-a12b9e50-12e6-49c5-beb2-190df7a0e014.png"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180864353-1a29ea89-ad05-4fd7-b4f9-632e0a8acfa0.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p> Message should clearly state this<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Add screenshot showing they can't send a negative amount</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180851738-6635f9d6-38a1-44e0-ae05-56f2e1a0cb5e.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180864429-2c9659f4-585b-422b-adbf-1692013e1811.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p> showing they can&#39;t send a negative amount<br></p>
 </td></tr>
 <tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180852160-e6c1e1df-b2c6-4fea-a121-bd27b4fa6ffc.png"/></td></tr>
@@ -119,7 +119,7 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 4: </em> Add screenshot(s) showing message if a user doesn't exist and/or a destination account wasn't found</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180852306-a2a2f051-987a-455d-aff7-12a28ba55fe7.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180864493-4721c4fa-fb61-4e00-969d-8aefedb10cbe.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>showing message if a user doesn&#39;t exist and/or a destination account<br></p>
 </td></tr>
 <tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180852375-98a220ab-a54a-4631-9cbf-222e7d90eaba.png"/></td></tr>
@@ -127,13 +127,13 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 5: </em> Add screenshot of the transactions table showing the recorded transfer</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180852539-4ea8524d-372f-4435-94a3-5d1b8613f122.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180864624-d4551d9d-1a1f-4055-875b-069d48098106.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>transactions table showing the recorded transfer<br></p>
 </td></tr>
-<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180852908-cc12d89e-358d-45ee-b40d-1d5e07b2a67a.png"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180864624-d4551d9d-1a1f-4055-875b-069d48098106.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>account 1 (transfer from)<br></p>
 </td></tr>
-<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180853022-bbce5f89-004e-486e-ac95-616131b0eb7f.png"/></td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/106360996/180863827-592983c9-80e7-4c89-9425-3de9ad57ec5a.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>account 2 (transfer into)<br></p>
 </td></tr>
 </table></td></tr>
