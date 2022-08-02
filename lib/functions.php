@@ -27,4 +27,5 @@ require(__DIR__ . "/get_url.php");
 require(__DIR__ . "/Milestone_2_functions.php");
 //Milestone 3 functions 
 require(__DIR__ . "/Milestone_3_functions.php");
-
+//Milestone 4 functions 
+require(__DIR__ . "/Milestone_4_functions.php");
