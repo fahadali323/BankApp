@@ -145,21 +145,20 @@
   - [x] \(07/24/2022 of completion) Transaction will be recorded with the type as “ext-transfer”/ Each transaction is recorded as a transaction pair in the Transaction table
     - https://github.com/fahadali323/IT202-450/pull/80 <br>   ![image](https://user-images.githubusercontent.com/106360996/180660483-edae7be0-0e3a-48ba-82c6-0909bc99814d.png)
 - Milestone 4
-  - [ ] \(mm/dd/yyyy of completion) 
+  - [x] \(08/1/2021 of completion) User can set their profile to be public or private (will need another column in Users table)
+    -  https://github.com/fahadali323/IT202-450/pull/93 <br> ![image](https://user-images.githubusercontent.com/106360996/182277665-cc7ae63f-54f1-4e23-81c2-946262b06652.png)
+  - [ ] \(mm/dd/yyyy of completion) Create a table for System Properties 
     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
+  - [ ] \(mm/dd/yyyy of completion) Alter the Accounts table to include a timestamp for last_apy_calc, default to current_timestamp, and a boolean for is_active default to true
     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
+  - [ ] \(mm/dd/yyyy of completion) User will be able open a savings account
     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
+  - [ ] \(mm/dd/yyyy of completion) User will be able to take out a loan
     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
+  - [ ] \(mm/dd/yyyy of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account
     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
+  - [ ] \(mm/dd/yyyy of completion) User will be able to close an account
     -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
-    -  Link to related .md file: [Link Name](link url)
-
   - 
 ### Intructions
 #### Don't delete this
