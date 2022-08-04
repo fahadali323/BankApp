@@ -3,30 +3,62 @@ require(__DIR__ . "/../../partials/nav.php");
 
 if(isset($_POST["save"])){
     $account = se($_POST, "account", null, false);
-    if(strlen($account)!=12){
-        flash("Please select an account", "warning");
-    }else{
-        $withdrawAmount = se($_POST, "withdraw", null, false);
-        $memo = se($_POST, "memo", null, false);
-        
-        if(get_balance($account) - ((int)$withdrawAmount *100) >= 0){
-            transaction((int)$withdrawAmount * -1, "withdraw", -1, find_account($account), $memo);
-            flash("Successful withdrawal" , "success");
-            //echo var_export(get_balance($account)>= $withdrawAmount);
-            die(header('Location: home.php'));
-           
-        }else{
-            flash("Insufficient funds" , "warning");
-        }
-    }
+    $ID = find_account($account);
+    $query = "SELECT user_id, account_type from Bank_Accounts where id = :src";
+            $db = getDB();
+            $stmt = $db->prepare($query);
+            $belongsToUser = true;
+            $isLoan = false;
+            try{
+                $stmt->execute([":src" => $ID]);
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $user_id = get_user_id();
+            // echo var_export($result);
+                if($result){
+                    //echo var_export($result);
+                    foreach($result as $r){
+                        if($r["user_id"] != $user_id){
+                            $belongsToUser = false;
+                            break;
+                        }elseif($r["account_type"] == "loan"){
+                            $isLoan = true;
+                            break;
+                        }
+                    }
+                }
+            }catch (PDOException $e){
+                flash("Technical error: " . var_export($e->errorInfo, true), "danger");
+            }
+            if(!$belongsToUser){
+                flash("Please select accounts that belong to user", "warning");
+            }elseif($isLoan){
+                flash("Cannot withdraw from loan account", "warning");
+            }else{
+                if(strlen($account)!=12){
+                    flash("Please select an account", "warning");
+                }else{
+                    $withdrawAmount = se($_POST, "withdraw", null, false);
+                    $memo = se($_POST, "memo", null, false);
+                    
+                    if(get_balance($account) - ((int)$withdrawAmount *100) >= 0){
+                        transaction((int)$withdrawAmount * -1, "withdraw", -1, find_account($account), $memo);
+                        //echo var_export(get_balance($account)>= $withdrawAmount);
+                        die(header('Location: home.php'));
+                       
+                    }else{
+                        flash("Insufficient funds" , "warning");
+                    }
+                }
+            }
+
 
 }
-$query = "SELECT account, account_type, balance from Bank_Accounts WHERE user_id = :uid AND account_type <> :loan";
+$query = "SELECT account, account_type, balance from Bank_Accounts WHERE user_id = :uid AND account_type <> :loan and active = :true";
 $db = getDB();
 $stmt = $db->prepare($query);
 $accounts = [];
 try{
-    $stmt->execute([":uid" => get_user_id(), ":loan" => "loan"]);
+    $stmt->execute([":uid" => get_user_id(), ":loan" => "loan", ":true" => "true"]);
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if ($results) {
         $accounts = $results;
@@ -43,7 +75,7 @@ try{
 <div class = "container-fluid">
 <?php if (is_logged_in()) : ?>
    <form onsubmit="return validate(this)" method="POST">
-
+    <br>
             <select class=" btn btn-dark form-select" name = "account">
                     <option selected> Select an account to withdraw from</option>
                 <?php foreach ($accounts as $account) : ?>
