@@ -32,7 +32,6 @@ function get_user_last()
     return "";
 }
 
-
 function get_balance($accountNumber)
 {
     if (is_logged_in()) {
@@ -61,23 +60,7 @@ function close_account($ID)
         }
     }
 }
-// function find_partial_account($accountNumber){
-//     if(is_logged_in()){
-//         $query = "SELECT id FROM Bank_Accounts WHERE account LIKE :account LIMIT 1";
-//         $db = getDB();
-//         $stmt = $db->prepare($query);
-//         try{
-//             $stmt->execute([":account" => "%$accountNumber%"]);
-//             $result = $stmt->fetch(PDO::FETCH_ASSOC);
-//             if($result){
-//                 return $result["id"];
-//             }
-//             return "";
-//         }catch (PDOException $e){
-//             flash("Technical error: " . var_export($e->errorInfo, true), "danger");
-//         }
-//     }
-// }
+
 function find_account($accountNumber)
 {
     if (is_logged_in()) {
@@ -106,8 +89,6 @@ function get_last_name_id($last)
         } else {
             return "none";
         }
-
-        //echo var_export($userID);
     } catch (PDOException $e) {
         flash("Technical error: " . var_export($e->errorInfo, true), "danger");
     }
@@ -125,11 +106,9 @@ function get_user_account_id()
         } catch (PDOException $e) {
             flash("Technical error: " . var_export($e->errorInfo, true), "danger");
         }
-        //return se($_SESSION["user"]["account"], "id", "", false);
     }
     return "";
 }
-
 
 function pagination_filter($newPage)
 {
@@ -214,32 +193,12 @@ function update_APY()
         flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
     }
 }
-// function frozen_check($ID){
-//     $querycheck= "SELECT frozen from Bank_Accounts where id = :id";
-//     $db = getDB();
-//     $stmt = $db->prepare($querycheck);
-//     $frozen = false;
-//     try {
-//         $stmt->execute([":id" => $ID]);
-//         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-//             if($result["frozen"] == "true"){
-//                 $frozen = true;
-//             }
-
-//         return $frozen;
-//     } catch (PDOException $e) {
-//         flash("Transfer error occurred: " . var_export($e->errorInfo, true), "danger");
-//     }   
-// }
 function transaction($money, $typeTrans, $src = -1, $dest = -1, $memo = "")
 {
-
-    //I'm choosing to ignore the record of 0 point transactions
     $query = "INSERT INTO Bank_Account_Transactions (src, dest, diff, typeTrans, memo) 
             VALUES (:acs, :acd, :pc, :r,:m), 
             (:acs2, :acd2, :pc2, :r, :m)";
-    //I'll insert both records at once, note the placeholders kept the same and the ones changed.
     $params[":acs"] = $src;
     $params[":acd"] = $dest;
     $params[":r"] = $typeTrans;
@@ -273,13 +232,7 @@ function create_account_admin($accountType, $user)
         $stmt = $db->prepare($query);
         try {
             $stmt->execute([":uid" => $user]);
-            //$result = $stmt->fetch(PDO::FETCH_ASSOC);
-            //account doesn't exist, create it
             $created = false;
-            //we're going to loop here in the off chance that there's a duplicate
-            //it shouldn't be too likely to occur with a length of 12, but it's still worth handling such a scenario
-
-            //you only need to prepare once
             $query = "INSERT INTO Bank_Accounts (account, user_id, account_type) VALUES (:an, :uid, :at)";
             $stmt = $db->prepare($query);
             $user_id = get_user_id(); //caching a reference
@@ -289,14 +242,8 @@ function create_account_admin($accountType, $user)
                     $account_number = get_random_str(12);
                     $stmt->execute([":an" => $account_number, ":uid" => $user, ":at" => $accountType]);
                     $created = true;
-                    //transaction($money, "deposit", -1, $account_number, ""); 
-                    //if we got here it was a success, let's exit
-
                 } catch (PDOException $e) {
                     $code = se($e->errorInfo, 0, "00000", false);
-                    //if it's a duplicate error, just let the loop happen
-                    //otherwise throw the error since it's likely something looping won't resolve
-                    //and we don't want to get stuck here forever
                     if (
                         $code !== "23000"
                     ) {
@@ -304,15 +251,12 @@ function create_account_admin($accountType, $user)
                     }
                 }
             }
-            //loop exited, let's assign the new values
             $account["id"] = $db->lastInsertId();
             $account["account_number"] = $account_number;
         } catch (PDOException $e) {
             flash("Technical error: " . var_export($e->errorInfo, true), "danger");
         }
         $_SESSION["user"]["account"] = $account; //storing the account info as a key under the user session
-        //Note: if there's an error it'll initialize to the "empty" definition around line 161
-
     } else {
         flash("You're not logged in", "danger");
     }
@@ -329,13 +273,7 @@ function get_or_create_account($accountType, $money)
         $stmt = $db->prepare($query);
         try {
             $stmt->execute([":uid" => get_user_id()]);
-            //$result = $stmt->fetch(PDO::FETCH_ASSOC);
-            //account doesn't exist, create it
             $created = false;
-            //we're going to loop here in the off chance that there's a duplicate
-            //it shouldn't be too likely to occur with a length of 12, but it's still worth handling such a scenario
-
-            //you only need to prepare once
             $query = "INSERT INTO Bank_Accounts (account, user_id, account_type) VALUES (:an, :uid, :at)";
             $stmt = $db->prepare($query);
             $user_id = get_user_id(); //caching a reference
@@ -345,8 +283,6 @@ function get_or_create_account($accountType, $money)
                     $account_number = get_random_str(12);
                     $stmt->execute([":an" => $account_number, ":uid" => $user_id, ":at" => $accountType]);
                     $created = true;
-                    //transaction($money, "deposit", -1, $account_number, ""); 
-                    //if we got here it was a success, let's exit
                     if ($accountType == "loan") {
                         flash("Your loan account has been opened");
                     } else {
@@ -354,9 +290,6 @@ function get_or_create_account($accountType, $money)
                     }
                 } catch (PDOException $e) {
                     $code = se($e->errorInfo, 0, "00000", false);
-                    //if it's a duplicate error, just let the loop happen
-                    //otherwise throw the error since it's likely something looping won't resolve
-                    //and we don't want to get stuck here forever
                     if (
                         $code !== "23000"
                     ) {
@@ -364,15 +297,12 @@ function get_or_create_account($accountType, $money)
                     }
                 }
             }
-            //loop exited, let's assign the new values
             $account["id"] = $db->lastInsertId();
             $account["account_number"] = $account_number;
         } catch (PDOException $e) {
             flash("Technical error: " . var_export($e->errorInfo, true), "danger");
         }
-        $_SESSION["user"]["account"] = $account; //storing the account info as a key under the user session
-        //Note: if there's an error it'll initialize to the "empty" definition around line 161
-
+        $_SESSION["user"]["account"] = $account;
     } else {
         flash("You're not logged in", "danger");
     }
@@ -380,18 +310,13 @@ function get_or_create_account($accountType, $money)
 function get_system_account()
 {
     if (is_logged_in()) {
-        //let's define our data structure first
-        //id is for internal references, account_number is user facing info, and balance will be a cached value of activity
         $account = ["id" => -1, "account_number" => false, "balance" => 0];
-        //this should always be 0 or 1, but being safe
         $query = "SELECT id, account, balance from Bank_Accounts where user_id = :uid LIMIT 1";
         $db = getDB();
         $stmt = $db->prepare($query);
         try {
             $stmt->execute([":uid" => -1]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            //$account = $result; //just copy it over
             $account["id"] = $result["id"];
             $account["account_number"] = $result["account"];
             $account["balance"] = $result["balance"];
@@ -399,8 +324,6 @@ function get_system_account()
             flash("Technical error: " . var_export($e->errorInfo, true), "danger");
         }
         $_SESSION["user"]["account"] = $account; //storing the account info as a key under the user session
-        //Note: if there's an error it'll initialize to the "empty" definition around line 161
-
     } else {
         flash("You're not logged in", "danger");
     }
@@ -408,27 +331,20 @@ function get_system_account()
 function get_account()
 {
     if (is_logged_in()) {
-        //let's define our data structure first
-        //id is for internal references, account_number is user facing info, and balance will be a cached value of activity
         $account = ["id" => -1, "account_number" => false, "balance" => 0];
-        //this should always be 0 or 1, but being safe
         $query = "SELECT id, account, balance from Bank_Accounts where user_id = :uid LIMIT 1";
         $db = getDB();
         $stmt = $db->prepare($query);
         try {
             $stmt->execute([":uid" => get_user_id()]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            //$account = $result; //just copy it over
             $account["id"] = $result["id"];
             $account["account_number"] = $result["account"];
             $account["balance"] = $result["balance"];
         } catch (PDOException $e) {
             flash("Technical error: " . var_export($e->errorInfo, true), "danger");
         }
-        $_SESSION["user"]["account"] = $account; //storing the account info as a key under the user session
-        //Note: if there's an error it'll initialize to the "empty" definition around line 161
-
+        $_SESSION["user"]["account"] = $account; 
     } else {
         flash("You're not logged in", "danger");
     }

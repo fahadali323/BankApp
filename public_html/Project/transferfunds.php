@@ -25,7 +25,9 @@ if (isset($_POST["save"])) {
                 $stmt->execute([":src" => $fromID]);
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 $user_id = get_user_id();
+                // echo var_export($result);
                 if ($result) {
+                    //echo var_export($result);
                     foreach ($result as $r) {
                         if ($r["user_id"] != $user_id) {
                             $belongsToUser = false;
@@ -65,9 +67,12 @@ if (isset($_POST["save"])) {
                 } catch (PDOException $e) {
                     flash("Technical error: " . var_export($e->errorInfo, true), "danger");
                 }
-
+                // $into = se($_POST, "accountINTO", null, false);
                 $memo = se($_POST, "memo", null, false);
                 $fromBal = get_balance($from);
+                //$intoBal = get_balance($into);
+                //$fromID = find_account($from);
+                //$intoID = find_account($into);
                 if ($otherID === "none") {
                     flash("No such account exists. Try again.", "warning");
                 } else {
@@ -93,6 +98,9 @@ if (isset($_POST["save"])) {
                                     transaction($amount, "ext-transfer", $fromID, $otherID, $memo);
                                     die(header("Location: user_accounts.php"));
                                 }
+                                // echo var_export($fromID);
+                                //echo var_export($otherID);
+
                             }
                         }
                     }
@@ -101,6 +109,10 @@ if (isset($_POST["save"])) {
         }
     }
 }
+
+
+
+
 
 $query = "SELECT account, account_type, balance from Bank_Accounts WHERE user_id = :uid AND account_type <> :loan and active = :true";
 $db = getDB();
@@ -172,12 +184,21 @@ try {
 <script>
     function validate(form) {
         let z = document["this"]["accountFROM"].value;
+        //let a = document["this"]["accountINTO"].value;
+        //alert(z);
+        //console.log(z);
         if (z.length != 12) {
             flash("Please select an account", "warning");
             return false;
         }
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
+        /*
+        let x = document.forms[form]["transfer"];
+  if (isNaN(x)) {
+    flash("Enter a valid amount", "warning");
+    return false;
+  } */
         return true;
     }
 </script>

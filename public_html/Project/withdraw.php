@@ -13,7 +13,9 @@ if(isset($_POST["save"])){
                 $stmt->execute([":src" => $ID]);
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 $user_id = get_user_id();
+            // echo var_export($result);
                 if($result){
+                    //echo var_export($result);
                     foreach($result as $r){
                         if($r["user_id"] != $user_id){
                             $belongsToUser = false;
@@ -36,15 +38,20 @@ if(isset($_POST["save"])){
                     flash("Please select an account", "warning");
                 }else{
                     $withdrawAmount = se($_POST, "withdraw", null, false);
-                    $memo = se($_POST, "memo", null, false)   ;      
+                    $memo = se($_POST, "memo", null, false);
+                    
                     if(get_balance($account) - ((int)$withdrawAmount *100) >= 0){
                         transaction((int)$withdrawAmount * -1, "withdraw", -1, find_account($account), $memo);
-                        die(header('Location: home.php'));  
+                        //echo var_export(get_balance($account)>= $withdrawAmount);
+                        die(header('Location: home.php'));
+                       
                     }else{
                         flash("Insufficient funds" , "warning");
                     }
                 }
             }
+
+
 }
 $query = "SELECT account, account_type, balance from Bank_Accounts WHERE user_id = :uid AND account_type <> :loan and active = :true";
 $db = getDB();
@@ -60,8 +67,10 @@ try{
     flash(var_export($e->errorInfo, true), "danger");
 }
 
+
 ?>
 <?php
+
 ?>
 <div class = "container-fluid">
 <?php if (is_logged_in()) : ?>

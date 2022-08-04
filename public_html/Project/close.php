@@ -4,6 +4,7 @@ if (is_logged_in()) {
     if (isset($_POST["save"])) {
         $account1 = se($_POST, "account", "", false);
         $account2 = se($_POST, "account2", "", false);
+        //echo var_export(strlen($account2));
         if (strlen($account2) < 51) {
             $accountType2 = substr($account2, 12);
             $account2 = substr($account2, 0, 12);
@@ -16,10 +17,14 @@ if (is_logged_in()) {
         if ($Amount != "") {
             $Amount = round($Amount * 100, 2);
         }
+
+        //echo var_export($Amount);
+        //  echo var_export($bal1);
         $db = getDB();
         if (strlen($account1) === 27) {
             flash("Please select an account", "warning");
         } elseif ($accountType1 !== "loan") {
+            //echo var_export($bal1);
             if ($bal1 == 0) {
                 close_account($ac1ID);
                 flash("Successful closing", "success");
@@ -29,6 +34,7 @@ if (is_logged_in()) {
                 } elseif (($bal1 - $Amount) != 0) {
                     flash("Must transfer exact amount in order to close account", "warning");
                 } else {
+                    //$id1 = find_account($account1);
                     $query = "SELECT user_id from Bank_Accounts where id = :src";
                     $db = getDB();
                     $stmt = $db->prepare($query);
@@ -37,7 +43,9 @@ if (is_logged_in()) {
                         $stmt->execute([":src" => $ac1ID]);
                         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         $user_id = get_user_id();
+                        // echo var_export($result);
                         if ($result) {
+                            //echo var_export($result);
                             foreach ($result as $r) {
                                 if ($r["user_id"] != $user_id) {
                                     $belongsToUser = false;
@@ -81,7 +89,9 @@ if (is_logged_in()) {
                             $stmt->execute([":src" => $ac1ID]);
                             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             $user_id = get_user_id();
+                            // echo var_export($result);
                             if ($result) {
+                                //echo var_export($result);
                                 foreach ($result as $r) {
                                     if ($r["user_id"] != $user_id) {
                                         $belongsToUser = false;
@@ -100,7 +110,9 @@ if (is_logged_in()) {
                             $stmt->execute([":src2" => $ac2ID]);
                             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             $user_id = get_user_id();
+                            // echo var_export($result);
                             if ($result) {
+                                //echo var_export($result);
                                 foreach ($result as $r) {
                                     if ($r["user_id"] != $user_id) {
                                         $belongsToUser = false;
@@ -130,6 +142,108 @@ if (is_logged_in()) {
                 }
             }
         }
+        // echo var_export($Amount);
+        /*
+        if(strlen($account1) === 27){
+            flash("Please select an account", "warning");
+        }else{
+            if($accountType1 === "loan"){
+                $ac2ID = find_account($account2);
+                $bal2 = get_balance($account2);
+                if($bal2 === 0){
+                    $query= "UPDATE Bank_Accounts set active = :false WHERE id = :id";
+                    $stmt = $db->prepare($query);
+                    try {
+                        $stmt->execute([":false" => "false", ":id" => $ac1ID]);
+                        
+                    } catch (PDOException $e) {
+                        flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
+                    }
+                    flash("Successful closing of loan account", "warning");
+                }else{
+                    if($Amount === ""){
+                        flash("Please select an account", "warning");
+                    }else{
+                        if($bal2 - ($Amount) < 0){
+                            flash("Insufficient funds to transfer" , "warning");
+                        }else{
+                            if($bal1 - $Amount !== 0){
+                                flash("Must transfer exact amount in order to close account" , "warning");
+                            }else{
+                                if($bal1 - $Amount === 0){
+                                    transaction($Amount/100,"transfer", $ac2ID, -1, "close");
+                                    transaction($Amount/100,"transfer", $ac1ID, -1, "close");
+                                    flash("Successful transfer and closing" , "success");
+                                    $query= "UPDATE Bank_Accounts set active = :false WHERE id = :id";
+                                    $stmt = $db->prepare($query);
+                                    try {
+                                        $stmt->execute([":false" => "false", ":id" => $ac1ID]);
+                                        
+                                    } catch (PDOException $e) {
+                                        flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
+                                    }
+                                    die(header('Location: user_accounts.php'));
+                                }
+                            }
+                        }
+                    }
+                    }
+                echo var_export($bal2);
+            }else{
+                if($accountType1 !== "loan"){
+                    if($bal1 - ((int)$Amount) == 0){
+                        transaction($Amount/100, "withdraw", find_account($account1), -1, "withdraw and close");
+                        flash("Successful withdrawal" , "success");
+                        $query= "UPDATE Bank_Accounts set active = :false WHERE id = :id";
+                        $stmt = $db->prepare($query);
+                        try {
+                            $stmt->execute([":false" => "false", ":id" => $ac1ID]);
+                            
+                        } catch (PDOException $e) {
+                            flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
+                        }
+                        die(header('Location: user_accounts.php'));
+                        //echo var_export(get_balance($account)>= $withdrawAmount);
+                       
+                       // die(header('Location: home.php'));
+                    }else{
+                        if($Amount === ""){
+                            flash("Please select an account", "warning");
+                        }else{
+                            if($bal1 - ((int)$Amount) == 0){
+                                transaction($Amount/100, "withdraw", find_account($account1), -1, "withdraw and close");
+                                flash("Successful withdrawal" , "success");
+                                die(header('Location: user_accounts.php'));
+                                //echo var_export(get_balance($account)>= $withdrawAmount);
+                               
+                                $query= "UPDATE Bank_Accounts set active = :false WHERE id = :id";
+                                $stmt = $db->prepare($query);
+                                try {
+                                    $stmt->execute([":false" => "false", ":id" => $ac1ID]);
+                                    
+                                } catch (PDOException $e) {
+                                    flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
+                                }
+                               // die(header('Location: home.php'));
+                               
+                            }else{
+                                if($bal1 - $Amount > 0){
+                                    flash("Must transfer exact amount in order to close account", "warning");
+                                }
+                                else{
+                                    flash("Insufficent funds to withdraw", "warning");
+                                }
+                            }
+                        }
+                    }
+                }else{
+                    flash("Please select an account to transfer loans", "warning");
+                } 
+                
+            }
+            //echo var_export($account);
+    
+        } */
     }
     $query = "SELECT account, account_type, balance from Bank_Accounts WHERE user_id = :uid AND active = :true";
     $db = getDB();
@@ -214,9 +328,13 @@ if (is_logged_in()) {
     }
     $("#account2").hide();
     $("#account").click(function() {
+        //var data = <?php echo json_encode($accounts, JSON_HEX_TAG); ?>;
+        // let g = <?php echo json_encode($accounts); ?>
+        // $("#header").text(data);
         let p = $("#account option:selected").text();
         let z = p.substring(12);
         let result = p.includes("loan");
+
         if (p.length !== 27) {
             if (result) {
                 $("#header").text("Deposit into loan account: " + p);
@@ -225,9 +343,11 @@ if (is_logged_in()) {
                 $("#header").text("Withdraw from account: " + p);
                 $("#account2").hide();
             }
+
         } else {
             $("#header").text("Enter Amount");
         }
+
     });
     var x = document.getElementsByClassName("bal");
     var data = <?php echo json_encode($accounts, JSON_HEX_TAG); ?>;
@@ -235,6 +355,8 @@ if (is_logged_in()) {
     for (let i of x) {
         let y = i.innerHTML;
         for (let d = 0; d < data.length; d++) {
+            // console.log(y.includes(data[d]["account"]));
+            // console.log(y.includes("loan"));
             if (y.includes(data[d]["account"]) && y.includes("loan")) {
                 i.innerHTML = y.substring(0, 29) + parseInt(data[d]["balance"]) / 100;
             } else {
@@ -247,6 +369,7 @@ if (is_logged_in()) {
                 }
             }
         }
+
     }
 </script>
 <?php
