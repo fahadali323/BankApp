@@ -22,6 +22,7 @@ if (is_logged_in()) {
             <a class="button4" href="<?php echo get_url('withdraw.php'); ?>" style= color:antiquewhite; role="button">Withdraw</a>
             <a class="button5" href="<?php echo get_url('transfer.php'); ?>" style= color:antiquewhite; role="button">Transfer</a>
             <a class="button6" href="<?php echo get_url('transferfunds.php'); ?>" style= color:antiquewhite; ="button">Transfer To Another User</a>
+            <a class="btn btn-dark" href="<?php echo get_url('loan.php'); ?>" role="button">Loan</a>
             <a class="button7" href="<?php echo get_url('profile.php'); ?>" style= color:antiquewhite; role="button">Profile</a>    
         <?php endif; ?>
     </div>
