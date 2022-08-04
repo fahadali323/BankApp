@@ -8,6 +8,7 @@ try {
     $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $value = $results[0]['APY'];
+    // echo var_export($value);
 } catch (PDOException $e) {
     flash(var_export($e->errorInfo, true), "danger");
 }
@@ -70,6 +71,8 @@ if (isset($_POST["save"])) {
         }
     }
 }
+
+
 ?>
 
 <head>
@@ -103,6 +106,8 @@ if (isset($_POST["save"])) {
                     <?php endforeach; ?>
                 </select>
             </div>
+            <!-- <input type="submit" class="btn btn-success" value = "See APY" name = "see"></input> -->
+
             <input type="submit" class="btn btn-success" value="Take out loan" name="save"></input>
         </form>
     <?php endif; ?>
@@ -119,7 +124,7 @@ if (isset($_POST["save"])) {
         console.log(i.innerHTML);
 
     }
-
+    
     function validate(form) {
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
