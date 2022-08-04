@@ -151,8 +151,12 @@
     -  https://github.com/fahadali323/IT202-450/pull/94 <br> ![image](https://user-images.githubusercontent.com/106360996/182509696-216df5bf-462c-46b4-a4ab-65bd65c5fdfb.png) <br> ![image](https://user-images.githubusercontent.com/106360996/182509778-676e1e8b-df10-42e9-9586-431f2078db9b.png)
   - [x] \(08/02/2022 of completion) Alter the Accounts table to include a timestamp for last_apy_calc, default to current_timestamp, and a boolean for is_active default to true
     -  https://github.com/fahadali323/IT202-450/pull/94<br> ![image](https://user-images.githubusercontent.com/106360996/182509879-ab7c34bf-4154-4db4-894f-9e0e402ababd.png)
-  - [ ] \(mm/dd/yyyy of completion) User will be able open a savings account
-    -  Link to related .md file: [Link Name](link url)
+  - [x] \(08/04/2022 of completion) User will be able open a savings account
+    -https://github.com/fahadali323/IT202-450/pull/95 <br> ![image](https://user-images.githubusercontent.com/106360996/182893699-0b730c39-d62d-439e-911d-b217c420c50e.png)
+      - [x] \(08/04/2022 of completion) System will generate a 12 digit/character account number per the existing rules (see Checking Account above) / System will associate the account to the user / Account type will be set as savings 
+      - https://github.com/fahadali323/IT202-450/pull/95 <br> ![image](https://user-images.githubusercontent.com/106360996/182893699-0b730c39-d62d-439e-911d-b217c420c50e.png)
+      - [x] \(08/04/2022 of completion)Will require a minimum deposit of $5 (from the world account) 
+      -https://github.com/fahadali323/IT202-450/pull/95 <br> ![image](https://user-images.githubusercontent.com/106360996/182893947-b40d7c05-2a8d-4ba4-8593-84f2a424b519.png)
   - [ ] \(mm/dd/yyyy of completion) User will be able to take out a loan
     -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account

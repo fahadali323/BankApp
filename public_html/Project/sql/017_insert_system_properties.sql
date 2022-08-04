@@ -1,0 +1,1 @@
+INSERT INTO `System_Properties`(id, name, Value) VALUES(1, 'savings', 1);
