@@ -159,8 +159,8 @@
       -https://github.com/fahadali323/IT202-450/pull/95 <br> ![image](https://user-images.githubusercontent.com/106360996/182893947-b40d7c05-2a8d-4ba4-8593-84f2a424b519.png)
   - [x] \(08/04/2022 of completion) User will be able to take out a loan
     -  https://github.com/fahadali323/IT202-450/pull/96 <br> ![image](https://user-images.githubusercontent.com/106360996/182899499-97f135f5-802b-4b3d-ab14-154104713021.png)
-  - [ ] \(mm/dd/yyyy of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account
-    -  Link to related .md file: [Link Name](link url)
+  - [x] \(08/04/2022 of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account
+    - https://github.com/fahadali323/IT202-450/pull/97 <br> ![image](https://user-images.githubusercontent.com/106360996/182902356-8356900c-ef9e-48d7-91ce-aa6799e9ed36.png)
   - [ ] \(mm/dd/yyyy of completion) User will be able to close an account
     -  Link to related .md file: [Link Name](link url)
 ### Intructions
