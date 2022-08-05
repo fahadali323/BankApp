@@ -145,23 +145,33 @@
   - [x] \(07/24/2022 of completion) Transaction will be recorded with the type as “ext-transfer”/ Each transaction is recorded as a transaction pair in the Transaction table
     - https://github.com/fahadali323/IT202-450/pull/80 <br>   ![image](https://user-images.githubusercontent.com/106360996/180660483-edae7be0-0e3a-48ba-82c6-0909bc99814d.png)
 - Milestone 4
-  - [ ] \(mm/dd/yyyy of completion) 
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) 
-    -  Link to related .md file: [Link Name](link url)
-
-  - 
-### Intructions
+  - [x] \(08/1/2021 of completion) User can set their profile to be public or private (will need another column in Users table)
+    -  https://github.com/fahadali323/IT202-450/pull/93 <br> ![image](https://user-images.githubusercontent.com/106360996/182277665-cc7ae63f-54f1-4e23-81c2-946262b06652.png)
+  - [x] \(08/02/2022 of completion) Create a table for System Properties 
+    -  https://github.com/fahadali323/IT202-450/pull/94 <br> ![image](https://user-images.githubusercontent.com/106360996/182509696-216df5bf-462c-46b4-a4ab-65bd65c5fdfb.png) <br> ![image](https://user-images.githubusercontent.com/106360996/182509778-676e1e8b-df10-42e9-9586-431f2078db9b.png)
+  - [x] \(08/02/2022 of completion) Alter the Accounts table to include a timestamp for last_apy_calc, default to current_timestamp, and a boolean for is_active default to true
+    -  https://github.com/fahadali323/IT202-450/pull/94<br> ![image](https://user-images.githubusercontent.com/106360996/182509879-ab7c34bf-4154-4db4-894f-9e0e402ababd.png)
+  - [x] \(08/04/2022 of completion) User will be able open a savings account
+    -https://github.com/fahadali323/IT202-450/pull/95 <br> ![image](https://user-images.githubusercontent.com/106360996/182893699-0b730c39-d62d-439e-911d-b217c420c50e.png)
+      - [x] \(08/04/2022 of completion) System will generate a 12 digit/character account number per the existing rules (see Checking Account above) / System will associate the account to the user / Account type will be set as savings 
+      - https://github.com/fahadali323/IT202-450/pull/95 <br> ![image](https://user-images.githubusercontent.com/106360996/182893699-0b730c39-d62d-439e-911d-b217c420c50e.png)
+      - [x] \(08/04/2022 of completion)Will require a minimum deposit of $5 (from the world account) 
+      -https://github.com/fahadali323/IT202-450/pull/95 <br> ![image](https://user-images.githubusercontent.com/106360996/182893947-b40d7c05-2a8d-4ba4-8593-84f2a424b519.png)
+  - [x] \(08/04/2022 of completion) User will be able to take out a loan
+    -  https://github.com/fahadali323/IT202-450/pull/96 <br> ![image](https://user-images.githubusercontent.com/106360996/182899499-97f135f5-802b-4b3d-ab14-154104713021.png)
+  - [x] \(08/04/2022 of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account
+    - https://github.com/fahadali323/IT202-450/pull/97 <br> ![image](https://user-images.githubusercontent.com/106360996/182902356-8356900c-ef9e-48d7-91ce-aa6799e9ed36.png)
+  - [x] \(08/04/2022 of completion) User will be able to close an account
+      - https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156570-b26400b9-efd4-4473-ac83-74adc0ef9c65.png)
+      - [x] \(08/04/2022 of completion) User must transfer or withdraw all funds out of the account before doing so (i.e., balance must be 0) 
+        -  https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156472-dcbb9c6b-21ab-41d9-a8a2-c6305cdca398.png) 
+      - [x] \(08/04/2022 of completion) Account’s “is_active” column will get set as false
+        -  https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156729-7fcd49f2-6c67-495c-bee0-e66ad8c33715.png)
+      - [x] \(08/04/2022 of completion) Closed accounts should not be visible to the user anymore
+        -  https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156777-0621c73c-3f4a-45ed-99a0-97176bfeaf28.png)
+      - [x] \(08/04/2022 of completion) If the account is a loan, it must be paid off in full first
+        -  https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156849-7f2fec38-8547-4217-a19a-c5e80d74a7e3.png) <br> ![image](https://user-images.githubusercontent.com/106360996/183156936-3ed825d3-ca20-4b27-b926-5eee999b33f7.png)
+ ### Intructions
 #### Don't delete this
 1. Pick one project type
 2. Create a proposal.md file in the root of your project directory of your GitHub repository
