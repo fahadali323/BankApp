@@ -1,6 +1,10 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
+/*
+    Fa376   
+    08/05/2022
+    Logic for updating the loan and displaying it onto the transactions sheet
+*/
 $query = "SELECT APY FROM System_Properties";
 $db = getDB();
 $stmt = $db->prepare($query);
@@ -12,6 +16,11 @@ try {
 } catch (PDOException $e) {
     flash(var_export($e->errorInfo, true), "danger");
 }
+/*
+    Fa376   
+    08/05/2022
+    Logic for updating the loan and displaying it onto the transactions sheet
+*/
 $query = "SELECT account, account_type, balance, active from Bank_Accounts WHERE user_id = :uid and account_type <> :loan AND active = :true";
 $db = getDB();
 $stmt = $db->prepare($query);
@@ -26,24 +35,22 @@ try {
     flash(var_export($e->errorInfo, true), "danger");
 }
 
-
+/*
+    Fa376   
+    08/05/2022
+    Logic for updating the loan and displaying it onto the transactions sheet
+*/
 
 if (isset($_POST["save"])) {
     $total = se($_POST, "loan", "", false);
-
-    // $apy = se($_POST, "apy", "", false);
-    //echo var_export($_POST["apy"]);
     $actual = ($total * ($value / 100)) + $total;
-    //echo var_export($actual);
     $accountID = se($_POST, "account", "", false);
     if (strlen($accountID) != 12) {
         flash("Please select an account", "warning");
     } elseif ($actual < 500) {
         flash("Enter a valid amount", "warning");
     } else {
-        //echo var_export(frozen_check(find_account($accountID)));
-        $accountID = find_account($accountID);
-
+        $accountID = find_account($accountID);  
         $query = "SELECT user_id, active from Bank_Accounts where id = :src";
         $db = getDB();
         $stmt = $db->prepare($query);
@@ -53,9 +60,7 @@ if (isset($_POST["save"])) {
             $stmt->execute([":src" => $accountID]);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $user_id = get_user_id();
-            // echo var_export($result);
             if ($result) {
-                //echo var_export($result);
                 foreach ($result as $r) {
                     if ($r["user_id"] != $user_id) {
                         $belongsToUser = false;
@@ -75,9 +80,6 @@ if (isset($_POST["save"])) {
             flash("Cannot complete transaction as account is closed", "warning");
         } else {
             get_or_create_account("loan", "");
-            //echo var_export(get_user_account_id());
-            //echo var_export($total);
-            //echo var_export($total *100);
             transaction($total, "loan", -1, get_user_account_id(), "loan");
             transaction($total, "loan", -1, $accountID, "loan");
             die(header('Location: user_accounts.php'));
@@ -149,18 +151,6 @@ if (isset($_POST["save"])) {
         return true;
     }
 
-    /*
-    $("see").click(function() {
-    var a = parseInt($('#loanAm').val(), 10),
-       b = parseInt($('#apy').val(), 10);
-       var c = (a*b) + a;
-       alert(a+b);
-       $("#total").text(a/100);
-    });
-    $("#loanAm").keydown(function(){
-        $(this).show();
-    });
-*/
     $("#loanAm").keyup(function() {
         var a = parseInt($('#loanAm').val(), 10);
         var data = <?php echo json_encode($value, JSON_HEX_TAG); ?>;
@@ -184,19 +174,7 @@ if (isset($_POST["save"])) {
             $("#total").hide();
         }
     });
-    /*
-    function showAPY(str) {
-  if (str.length == 0) {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  } else {
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = function() {
-      document.getElementById("total").innerHTML = this.responseText;
-    }
-    xmlhttp.send();
-  }
-}*/
+
 </script>
 <?php
 require(__DIR__ . "/../../partials/flash.php");

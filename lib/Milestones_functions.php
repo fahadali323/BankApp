@@ -37,7 +37,7 @@ function get_balance($accountNumber)
     if (is_logged_in()) {
         $query = "SELECT balance FROM Bank_Accounts WHERE account = :account LIMIT 1";
         $db = getDB();
-        $stmt = $db->prepare($query);
+        $stmt = $db->prepare($query);   
         try {
             $stmt->execute([":account" => $accountNumber]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -130,6 +130,10 @@ function refresh_account_balance($accountID)
         }
     }
 }
+/*  Fa376 
+    8/5/2020 
+    In this function apy gets determined.
+*/ 
 function update_APY()
 {
     $query = "SELECT account, ID, created, balance, updated, active FROM Bank_Accounts where user_id = :ID AND account_type = :savings OR account_type = :loan AND active = :true";
