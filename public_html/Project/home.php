@@ -3,9 +3,7 @@ require(__DIR__ . "/../../partials/nav.php");
 ?>
 <?php
 if (is_logged_in()) {
-   // echo "Welcome home, " . get_username();
-    //comment this out if you don't want to see the session variables
-   // echo "<pre>" . var_export($_SESSION, true) . "</pre>";
+   update_APY();
 } 
 ?>
 <div class = "container-fluid">
@@ -21,10 +19,12 @@ if (is_logged_in()) {
             <a class="button4" href="<?php echo get_url('withdraw.php'); ?>" style= color:antiquewhite; role="button">Withdraw</a>
             <a class="button5" href="<?php echo get_url('transfer.php'); ?>" style= color:antiquewhite; role="button">Transfer</a>
             <a class="button6" href="<?php echo get_url('transferfunds.php'); ?>" style= color:antiquewhite; ="button">Transfer To Another User</a>
+            <a class="button3" href="<?php echo get_url('loan.php'); ?>" style= color:antiquewhite; role="button">Loan</a>
+            <a class="button" href="<?php echo get_url('close.php'); ?>" style= color:antiquewhite; role="button">Close Account</a>
             <a class="button7" href="<?php echo get_url('profile.php'); ?>" style= color:antiquewhite; role="button">Profile</a>    
         <?php endif; ?>
     </div>
-</div>
+</div>  
 
 <?php
 require(__DIR__ . "/../../partials/flash.php");
