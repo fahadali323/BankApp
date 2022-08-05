@@ -1,2 +1,5 @@
 Alter Table `Bank_Accounts`
-ADD COLUMN last_apy_calc timestamp DEFAULT NUll
+Add Column Updated TIMESTAMP
+ALTER TABLE Bank_Accounts
+ADD is_active varchar(15) DEFAULT 'true';
+

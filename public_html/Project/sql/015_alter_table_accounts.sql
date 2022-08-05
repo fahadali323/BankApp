@@ -1,2 +1,2 @@
 ALTER TABLE Bank_Accounts
-ADD is_active boolean default true;
+ADD active boolean default true;

@@ -145,7 +145,6 @@ $queryAPY = "SELECT APY from System_Properties WHERE APY = :APY";
             y.innerHTML = "-";
         }
         
-        
         //console.log(u);
         d++;
     }

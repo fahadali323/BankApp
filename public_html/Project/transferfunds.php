@@ -89,7 +89,6 @@ if (isset($_POST["save"])) {
                                     if ($intoBal - ($amount * 100) < 0) {
                                         flash("Transfer exceeded loan balance", "warning");
                                     } else {
-
                                         transaction($amount, "ext-transfer", $fromID, -1, $memo);
                                         transaction($amount, "ext-transfer", $otherID, -1, $memo);
                                         //echo var_export($otherID);
