@@ -161,9 +161,17 @@
     -  https://github.com/fahadali323/IT202-450/pull/96 <br> ![image](https://user-images.githubusercontent.com/106360996/182899499-97f135f5-802b-4b3d-ab14-154104713021.png)
   - [x] \(08/04/2022 of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account
     - https://github.com/fahadali323/IT202-450/pull/97 <br> ![image](https://user-images.githubusercontent.com/106360996/182902356-8356900c-ef9e-48d7-91ce-aa6799e9ed36.png)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to close an account
-    -  Link to related .md file: [Link Name](link url)
-### Intructions
+  - [x] \(08/04/2022 of completion) User will be able to close an account
+      - https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156570-b26400b9-efd4-4473-ac83-74adc0ef9c65.png)
+      - [x] \(08/04/2022 of completion) User must transfer or withdraw all funds out of the account before doing so (i.e., balance must be 0) 
+        -  https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156472-dcbb9c6b-21ab-41d9-a8a2-c6305cdca398.png) 
+      - [x] \(08/04/2022 of completion) Account’s “is_active” column will get set as false
+        -  https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156729-7fcd49f2-6c67-495c-bee0-e66ad8c33715.png)
+      - [x] \(08/04/2022 of completion) Closed accounts should not be visible to the user anymore
+        -  https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156777-0621c73c-3f4a-45ed-99a0-97176bfeaf28.png)
+      - [x] \(08/04/2022 of completion) If the account is a loan, it must be paid off in full first
+        -  https://github.com/fahadali323/IT202-450/pull/98 <br> ![image](https://user-images.githubusercontent.com/106360996/183156849-7f2fec38-8547-4217-a19a-c5e80d74a7e3.png) <br> ![image](https://user-images.githubusercontent.com/106360996/183156936-3ed825d3-ca20-4b27-b926-5eee999b33f7.png)
+ ### Intructions
 #### Don't delete this
 1. Pick one project type
 2. Create a proposal.md file in the root of your project directory of your GitHub repository
