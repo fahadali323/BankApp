@@ -15,7 +15,11 @@
  
  
 ### Proposal Checklist and Evidence
-
+  Milestone 1 Md Link : https://github.com/fahadali323/IT202-450/blob/Milestone1/public_html/milestone1.md <br>
+  Milestone 2 Md Link : https://github.com/fahadali323/IT202-450/blob/Milestone2/public_html/Milestone2.md <br>
+  Milestone 3 Md Link : https://github.com/fahadali323/IT202-450/blob/Milestone3/public_html/Project/milestone3.md <br>
+  Milestone 4 Md Link : https://github.com/fahadali323/IT202-450/blob/Milestone4/public_html/milestone4.md <br>
+  Final Demo Link:
 - Milestone 1
   - [x] \(07/05/2022 of completion) User will be able to register a new account
       -  https://github.com/fahadali323/IT202-450/pull/36
