@@ -19,7 +19,8 @@
   Milestone 2 Md Link : https://github.com/fahadali323/IT202-450/blob/Milestone2/public_html/Milestone2.md <br>
   Milestone 3 Md Link : https://github.com/fahadali323/IT202-450/blob/Milestone3/public_html/Project/milestone3.md <br>
   Milestone 4 Md Link : https://github.com/fahadali323/IT202-450/blob/Milestone4/public_html/milestone4.md <br>
-  Final Demo Link:
+  Final Demo Link: Kaltura: https://mediaspace.njit.edu/media/Kaltura+Capture+recording+-+August+7th+2022%2C+11A22A55+am/1_gknwa8uj <br>
+                  Youtube: https://youtu.be/3rlXgdY4FTk
 - Milestone 1
   - [x] \(07/05/2022 of completion) User will be able to register a new account
       -  https://github.com/fahadali323/IT202-450/pull/36
