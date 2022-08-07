@@ -2,7 +2,7 @@
 require(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["save"])){
     $account = se($_POST, "save", null, false);
-    $query = "SELECT diff, typeTrans, created from Bank_Account_Transactions where src = :src LIMIT 10";
+    $query = "SELECT diff, typeTrans, created, memo from Bank_Account_Transactions where src = :src LIMIT 10";
     $db = getDB();
     $stmt = $db->prepare($query);
     try{
@@ -91,6 +91,7 @@ $queryAPY = "SELECT APY from System_Properties WHERE APY = :APY";
                             <thead>
                                 <th>Amount</th>
                                 <th>Type</th>
+                                <th>Memo</th>
                                 <th>Date</th>
                             </thead>
                             <tbody>
@@ -104,6 +105,7 @@ $queryAPY = "SELECT APY from System_Properties WHERE APY = :APY";
                                 
                                     <td class = "bal"><?php se($h, "diff"); ?></td>
                                     <td><?php se($h, "typeTrans"); ?></td>
+                                    <td><?php se($h, "memo"); ?></td>
                                     <td><?php se($h, "created"); ?></td>
                                 </tr>
                             <?php endforeach; ?> 
